@@ -75,8 +75,9 @@ Read our full [Privacy Policy](https://hiyd.uk/privacy) and [Security Policy](ht
 
 Need help? We're here for you:
 
-- **Email**: [support@hiyd.uk](mailto:support@hiyd.uk)
-- **Website**: [hiyd.uk](https://hiyd.uk)
+- Email: [support@hiyd.uk](mailto:support@hiyd.uk)
+- Website: [hiyd.uk](https://hiyd.uk)
+- Reddit: [r/hiydapp](https://www.reddit.com/r/hiydapp/)
 
 ## 📄 Legal
 
