@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="Content-Security-Policy"
-          content="default-src *; script-src * 'unsafe-inline'; style-src *; upgrade-insecure-requests; block-all-mixed-content">
+            content="default-src *; script-src * 'unsafe-inline'; style-src *; upgrade-insecure-requests; block-all-mixed-content">
         <meta name="referrer" content="origin">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Hiyd - Jekyll Companion Apps and Extensions</title>
@@ -16,58 +16,49 @@
         <link rel="shortcut icon" href="/assets/favicon.ico" />
         <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
         <meta name="apple-mobile-web-app-title" content="Hiyd" />
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-itunes-app" content="app-id=6746853559, app-argument=hiyd.uk">
         <link rel="manifest" href="/assets/site.webmanifest" />
     </head>
 
     <body>
-        <div class="container">
-            <!-- Left Column - Main Content -->
-            <div class="left-column">
-                <div class="content">
-                    <div class="logo-section">
+        <div class="site-wrap">
+            <header class="hero">
+                <div class="hero-head">
+                    <div class="brand-mark">
                         <img src="assets/hiyd-logo-90.png" alt="Hiyd Logo" class="logo">
-                        <h1>Hiyd</h1>
+                        <div>
+                            <h1>Hiyd</h1>
+                            <p class="tagline">Jekyll Companion App</p>
+                        </div>
                     </div>
-
-                    <div class="description">
-                        <p class="tagline">Jekyll Companion App</p>
-                        <p class="subtitle">Generate markdown content for your Jekyll site with ease.
-                            Create posts with front matter quickly on iOS and Chrome.</p>
-                    </div>
-
                     <div class="cta-buttons">
                         <a href="https://apps.apple.com/us/app/hiyd/id6746853559" class="btn btn-appstore">
-                            <div class="btn-content">
-                                <span class="btn-text-small">Download on the</span>
-                                <span class="btn-text-large">App Store</span>
-                            </div>
+                            <span class="btn-text-small">Download on the</span>
+                            <span class="btn-text-large">App Store</span>
                         </a>
                         <a href="https://chrome.google.com/webstore/detail/hiyd/hkeklhoojnogpfmiikadpcmkmpldhpce"
                             class="btn btn-chrome">
-                            <div class="btn-content">
-                                <span class="btn-text-small">Available in the</span>
-                                <span class="btn-text-large">Chrome Web Store</span>
-                            </div>
+                            <span class="btn-text-small">Available in the</span>
+                            <span class="btn-text-large">Chrome Web Store</span>
                         </a>
                     </div>
+                </div>
 
-                    <div class="features">
-                        <ul>
+                <div class="hero-body">
+                    <div class="hero-info">
+                        <p class="subtitle">Generate markdown content for your Jekyll site with ease.
+                            Create posts with front matter quickly on iOS and Chrome.</p>
+
+                        <ul class="hero-features">
                             <li>✨ Generate markdown content quickly</li>
                             <li>✨ Jekyll-specific formatting</li>
                             <li>✨ Front matter support</li>
                             <li>✨ Privacy with iCloud files storage only</li>
                             <li>✨ Quick preview</li>
-                            <li>✨ iPhone and iPad support</li>
-                            <li?>✨ Chrome extension for desktop</li>
                         </ul>
-                    </div>
 
-                    <!-- Review Section -->
-                    <div class="review-section">
                         <div class="review-card">
                             <div class="stars">★★★★★</div>
                             <p class="review-text">"Perfect for Jekyll users! Makes creating posts so much easier. The
@@ -75,32 +66,24 @@
                             <p class="reviewer">— Sarah K., Developer</p>
                         </div>
                     </div>
-                </div>
-            </div>
 
-            <!-- Right Column - App Preview -->
-            <div class="right-column">
-                <div class="app-preview">
-                    <img src="assets/iphone-app-screen.png" alt="Hiyd App on iPhone" class="phone-image">
+                    <div class="hero-media">
+                        <img src="assets/iphone-app-screen.png" alt="Hiyd App on iPhone" class="phone-image">
+                    </div>
                 </div>
-            </div>
-        </div>
+            </header>
 
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="footer-content">
+            <footer class="footer">
                 <div class="footer-links">
                     <a href="/privacy" class="footer-link">Privacy Policy</a>
                     <a href="/terms" class="footer-link">Terms of Service</a>
                     <a href="/security" class="footer-link">Security</a>
                     <a href="/support" class="footer-link">Support</a>
-                    <a href=""https://reddit.com/r/hiydapp" class="footer-link">Community (Reddit)</a>
+                    <a href="https://reddit.com/r/hiydapp" class="footer-link">Community (Reddit)</a>
                 </div>
-                <div class="footer-text">
-                    <p>&copy; 2025 Hiyd UK</p>
-                </div>
-            </div>
-        </footer>
+                <p class="footer-text">&copy; 2025 Hiyd UK</p>
+            </footer>
+        </div>
     </body>
 
 </html>
