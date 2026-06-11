@@ -1,2 +1,41 @@
+title: Hiyd - The Jekyll Companion App
+url: "https://hiyd.uk"
+copyright: "Hiyd UK"
+highlighter: rouge
+baseurl: ""
+timezone: Europe/London
+encoding: UTF-8
+future: false
+github:
+  repository_url: https://github.com/thechelsuk/uk.hiyd
+  branch: main
 include:
   - ".well-known"
+exclude:
+  - CNAME
+  - README.md
+  - LICENSE.md
+  - SECURITY.md
+  - .jekyll-cache/
+  - htmlcov/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/
+  - assets/
+maker: 
+  title: "thechelsuk"
+  url: "https://thechels.uk"
+links:
+  - title: "Support"
+    url: "/support"
+  - title: "Community (Reddit) ⇗"
+    url: "https://reddit.com/r/hiydapp"
+  - title: "Bluesky ⇗"
+    url: "https://bsky.app/profile/hiyd.uk"
+apps:
+  - title: "Hiyd for iOS"
+    url: "https://apps.apple.com/app/id6442034417"
+  - title: "Hiyd for Chrome"
+    url: "https://chrome.google.com/webstore/detail/hiyd-for-chrome/ldhgbhfjhfjgkhdjfbhbbfbdlpfbko"
