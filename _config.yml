@@ -11,6 +11,7 @@ github:
   branch: main
 include:
   - ".well-known"
+  - assets/
 exclude:
   - CNAME
   - README.md
@@ -23,7 +24,6 @@ exclude:
   - Gemfile.lock
   - node_modules/
   - vendor/
-  - assets/
 maker: 
   title: "thechelsuk"
   url: "https://thechels.uk"
