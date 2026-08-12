@@ -1,0 +1,29 @@
+# Hiyd
+
+> Hiyd is the Jekyll Companion App — a suite of apps and extensions that help you generate markdown content for your Jekyll site.
+Create posts with front matter quickly on iOS, and capture content for link posts in Chromium browsers.
+
+Hiyd is made in the UK by thechels.uk. Key features include quick markdown generation; create, save, edit, and export workflows;
+custom front matter defaults; privacy via iCloud file storage; quick previews; biometric locking; iPhone and iPad support;
+and Shortcuts & Siri integration. Version 2.0 also includes direct to GitHub publishing using personal access tokens.
+
+## Apps & Extensions
+
+- [Hiyd on the App Store](https://apps.apple.com/us/app/hiyd/id6746853559): iOS app for creating Jekyll posts with front matter on iPhone and iPad.
+- [Hiyd on the Chrome Web Store](https://chrome.google.com/webstore/detail/hiyd/hkeklhoojnogpfmiikadpcmkmpldhpce): Chromium browser extension for capturing content for link posts.
+
+## Documentation & Policies
+
+- [Privacy Policy](https://hiyd.uk/privacy): How Hiyd handles user data and privacy.
+- [Terms of Service](https://hiyd.uk/terms): Terms governing use of Hiyd apps and services.
+- [Security](https://hiyd.uk/security): Security practices and information.
+- [Support](https://hiyd.uk/support): Help and support resources.
+
+## Community
+
+- [Community (Reddit)](https://reddit.com/r/hiydapp): Hiyd community subreddit.
+- [Bluesky](https://bsky.app/profile/hiyd.uk): Hiyd on Bluesky.
+
+## Optional
+
+- [thechels.uk](https://thechels.uk): The maker of Hiyd.
