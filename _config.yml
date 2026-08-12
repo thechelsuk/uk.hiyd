@@ -24,7 +24,7 @@ exclude:
   - Gemfile.lock
   - node_modules/
   - vendor/
-maker: 
+maker:
   title: "thechelsuk"
   url: "https://thechels.uk"
 links:
