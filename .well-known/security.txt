@@ -1,7 +1,12 @@
+---
+layout: empty
+permalink: /.well-known/security.txt
+---
+
 # Security
 
-Site: https://hiyd.uk
-Contact: security@thechels.uk
+Contact: https://github.com/thechelsuk/uk.hiyd/security/advisories/new
+Contact: security@hiyd.uk
 Encryption: https://thechels.uk/pgp
 
 Preferred-Languages: en
