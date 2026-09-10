@@ -24,9 +24,9 @@ github:
 
 plugins:
   - jekyll-seo-tag
-  - jekyll-sitemap
   - jekyll-github-metadata
   - jemoji
+# Note: no jekyll-sitemap — /sitemap.xml is a Liquid template in the repo root.
 
 # --- Social / app ----------------------------------------------------------
 app_store_url: "https://apps.apple.com/gb/app/hiyd/id6746853559"

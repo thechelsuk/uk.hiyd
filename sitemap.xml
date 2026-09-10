@@ -1,0 +1,33 @@
+---
+layout: empty
+permalink: /sitemap.xml
+sitemap: false
+---
+<?xml version="1.0" encoding="UTF-8"?>
+{%- comment -%}
+  Hand-rolled sitemap. New pages and guides are picked up automatically:
+  every .html/.md page (unless it sets `sitemap: false` in its front matter)
+  and every document in the `guides` collection is listed. No plugin needed.
+{%- endcomment -%}
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{%- assign pages = site.pages | where_exp: "p", "p.sitemap != false" | sort: "url" -%}
+{%- for page in pages -%}
+  {%- assign ext = page.name | split: "." | last | downcase -%}
+  {%- if ext == "html" or ext == "md" -%}
+  <url>
+    <loc>{{ page.url | replace: "index.html", "" | absolute_url }}</loc>
+    <lastmod>{% if page.last_updated %}{{ page.last_updated | date: "%Y-%m-%d" }}{% else %}{{ site.time | date: "%Y-%m-%d" }}{% endif %}</lastmod>
+    {%- if page.url == "/" %}
+    <priority>1.0</priority>
+    {%- endif %}
+  </url>
+  {%- endif -%}
+{%- endfor -%}
+{%- assign guides = site.guides | sort: "order" -%}
+{%- for guide in guides -%}
+  <url>
+    <loc>{{ guide.url | absolute_url }}</loc>
+    <lastmod>{{ guide.last_modified_at | default: guide.date | default: site.time | date: "%Y-%m-%d" }}</lastmod>
+  </url>
+{%- endfor -%}
+</urlset>
