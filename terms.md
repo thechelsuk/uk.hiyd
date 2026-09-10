@@ -1,95 +1,74 @@
-# Terms of Service
+---
+title: "Terms of Service"
+eyebrow: "Legal"
+summary: "The terms you agree to by using the Hiyd app or extension."
+last_updated: "10 September 2026"
+description: "Terms of Service for the Hiyd iOS app and Chrome extension: acceptable use, GitHub publishing, purchases, disclaimers and liability."
+---
 
-**Last updated:** _June 3, 2025_
+By downloading, installing or using the Hiyd iOS app or the Hiyd Chrome
+extension, you agree to these Terms. If you do not agree, do not use them.
 
-## Agreement to Terms
+## The service
 
-By downloading, installing, or using the Hiyd app (iOS) or Chrome extension, you agree to be bound by these Terms of Service ("Terms"). If you disagree with any part of these terms, you may not use our service.
+Hiyd helps you write Markdown content with YAML front matter for Jekyll sites,
+store it in your iCloud Drive, and optionally publish it to a GitHub repository
+you control. Writing, previewing and exporting happen on your device. Publishing
+sends the file you choose to GitHub on your behalf.
 
-## Description of Service
+## Acceptable use
 
-Hiyd is a Jekyll companion app that helps you:
+You may use Hiyd to create content for personal or commercial projects. You may
+not use it to:
 
-- Generate markdown content for Jekyll sites
-- Create posts with proper front matter formatting
-- Preview content before publishing
-- Work with Jekyll-specific formatting tools
+- break any applicable law, or infringe anyone's rights;
+- create or distribute unlawful, harmful or abusive content;
+- attempt to reverse engineer, decompile or extract source code from the app,
+  except where that restriction is prohibited by law.
 
-The service operates entirely on your local device with no server-side processing.
+## GitHub publishing
 
-## Acceptable Use
+If you configure GitHub publishing, you are responsible for the personal access
+token you provide and for what is committed to your repositories using it. Use a
+fine-grained token scoped to only the repositories you intend to publish to.
+Hiyd commits to the repository's default branch at the folder path you set.
 
-You may use Hyd for:
+## Purchases
 
-- ✅ Creating markdown content for personal or commercial Jekyll sites
-- ✅ Generating front matter for blog posts and pages
-- ✅ Educational and learning purposes
-- ✅ Open source and commercial projects
+Hiyd is free. The app offers an optional annual subscription and optional one-off
+tips through Apple's In-App Purchase system. Subscriptions renew until cancelled;
+manage or cancel them in your Apple Account settings. Payments, refunds and
+renewals are handled by Apple under the
+[Apple Media Services Terms](https://www.apple.com/legal/internet-services/itunes/).
 
-You may not use Hiyd for:
+## Your content
 
-- ❌ Any illegal or unauthorized purpose
-- ❌ Creating harmful, abusive, or inappropriate content
-- ❌ Violating any local, state, national, or international law
-- ❌ Reverse engineering or attempting to extract source code
+You keep all rights to everything you create with Hiyd. We claim no licence over
+it and never receive a copy, except that publishing sends your chosen file
+directly to GitHub at your instruction.
 
-## Intellectual Property
+## Disclaimers and liability
 
-- **Your Content**: You retain all rights to content you create using Hiyd
-- **App Software**: Hiyd and its original content, features, and functionality are owned by us and protected by copyright and other intellectual property laws
-- **Jekyll**: Jekyll is an open-source project. Hiyd is not affiliated with or endorsed by Jekyll's creators
+Hiyd is provided "as is", without warranty of any kind. Because your content is
+stored on your device and in your iCloud Drive, we cannot guarantee against data
+loss caused by device failure, iCloud issues or user error — keep your own
+backups. We strive for Jekyll compatibility but cannot guarantee it for every
+configuration.
 
-## Disclaimers
-
-- **No Warranty**: Hiyd is provided "as is" without warranty of any kind
-- **Local Processing**: Since all processing happens locally, we cannot guarantee data persistence if your device fails
-- **Compatibility**: We strive for Jekyll compatibility but cannot guarantee compatibility with all Jekyll configurations
-- **Availability**: As a local app, availability depends on your device functionality
-
-## Limitation of Liability
-
-To the maximum extent permitted by law:
-
-- We shall not be liable for any indirect, incidental, special, or consequential damages
-- Our total liability shall not exceed the amount you paid for the app (if any)
-- We are not responsible for data loss due to device failure or user error
-
-## Privacy
-
-Your privacy is important to us. Please review our Privacy Policy, which explains how we handle your information (spoiler: we don't collect any).
-
-## Updates and Changes
-
-- **App Updates**: We may release updates to improve functionality
-- **Terms Updates**: We may modify these terms at any time
-- **Notification**: Material changes will be communicated through app updates or our website
+To the maximum extent permitted by law, we are not liable for any indirect or
+consequential loss, and our total liability will not exceed the amount you paid
+us (if any) in the twelve months before the claim.
 
 ## Termination
 
-- **By You**: You may stop using Hiyd at any time by uninstalling the app
-- **By Us**: We may terminate access if you violate these terms
-- **Effect**: Upon termination, your right to use Hiyd ends, but your locally stored content remains yours
+You may stop using Hiyd at any time by uninstalling it; your local content
+remains yours. We may suspend access for a serious or repeated breach of these
+Terms.
 
-## Support
+## Governing law
 
-For support or questions:
+These Terms are governed by the law of England and Wales.
 
-- Email: <support@hiyd.uk>
-- Website: hiyd.uk
+## Contact
 
-## Governing Law
-
-These Terms are governed by and construed in accordance with applicable laws, without regard to conflict of law principles.
-
-## Severability
-
-If any provision of these Terms is held to be unenforceable, the remaining provisions will remain in full force and effect.
-
-## Contact Information
-
-For questions about these Terms, contact us at:
-
-- Email: <legal@hiyd.uk>
-- Website: hiyd.uk
-
-By using Hiyd, you acknowledge that you have read and understand these Terms of Service.
+Questions about these Terms: <legal@hiyd.uk>

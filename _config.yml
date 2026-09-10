@@ -1,41 +1,92 @@
-title: Hiyd - The Jekyll Companion App
+# --- Site identity -----------------------------------------------------------
+title: "Hiyd — The Jekyll Companion App"
+tagline: "Write Jekyll posts on your iPhone and iPad"
+description: >-
+  Hiyd is a fast, private iOS app for drafting Markdown posts with YAML front
+  matter and publishing them straight to your Jekyll site on GitHub. A Chrome
+  extension captures link posts from the browser.
 url: "https://hiyd.uk"
-copyright: "Hiyd UK"
-highlighter: rouge
 baseurl: ""
+lang: en-GB
+copyright: "Hiyd UK"
+author: "thechelsuk"
+
+# --- Build ------------------------------------------------------------------
+highlighter: rouge
 timezone: Europe/London
 encoding: UTF-8
 future: false
+permalink: /:slug/
+
 github:
   repository_url: https://github.com/thechelsuk/uk.hiyd
   branch: main
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-github-metadata
+  - jemoji
+
+# --- Social / app ----------------------------------------------------------
+app_store_url: "https://apps.apple.com/gb/app/hiyd/id6746853559"
+app_store_id: "6746853559"
+chrome_store_url: "https://chromewebstore.google.com/detail/hiyd/hkeklhoojnogpfmiikadpcmkmpldhpce"
+min_ios_version: "18.6"
+
+# jekyll-seo-tag
+logo: /assets/hiyd-logo-90.png
+image: /assets/hiyd-logo-90.png
+
+# `social` is consumed both by our templates (reddit/bluesky/github) and by
+# jekyll-seo-tag (name/links -> Organization sameAs).
+social:
+  name: Hiyd
+  reddit: "https://reddit.com/r/hiydapp"
+  bluesky: "https://bsky.app/profile/hiyd.uk"
+  github: "https://github.com/thechelsuk/uk.hiyd"
+  links:
+    - https://bsky.app/profile/hiyd.uk
+    - https://reddit.com/r/hiydapp
+    - https://github.com/thechelsuk/uk.hiyd
+
+# --- Navigation ----------------------------------------------------------
+nav:
+  - title: Features
+    url: /#features
+  - title: Guides
+    url: /guides/
+  - title: FAQ
+    url: /faq/
+  - title: Support
+    url: /support/
+
+# --- Collections ---------------------------------------------------------
+collections:
+  guides:
+    output: true
+    permalink: /guides/:slug/
+
+defaults:
+  - scope: { path: "" }
+    values: { layout: "page", image: "/assets/hiyd-logo-90.png" }
+  - scope: { path: "", type: "guides" }
+    values: { layout: "guide" }
+  - scope: { path: "index.html" }
+    values: { layout: "home" }
+
+# --- Files ---------------------------------------------------------------
 include:
   - ".well-known"
   - assets/
 exclude:
   - CNAME
   - README.md
+  - LICENCE.md
   - LICENSE.md
   - SECURITY.md
-  - .jekyll-cache/
-  - htmlcov/
-  - gemfiles/
   - Gemfile
   - Gemfile.lock
+  - .jekyll-cache/
   - node_modules/
   - vendor/
-maker:
-  title: "thechelsuk"
-  url: "https://thechels.uk"
-links:
-  - title: "Support"
-    url: "/support"
-  - title: "Community (Reddit) ⇗"
-    url: "https://reddit.com/r/hiydapp"
-  - title: "Bluesky ⇗"
-    url: "https://bsky.app/profile/hiyd.uk"
-apps:
-  - title: "Hiyd for iOS"
-    url: "https://apps.apple.com/app/id6442034417"
-  - title: "Hiyd for Chrome"
-    url: "https://chrome.google.com/webstore/detail/hiyd-for-chrome/ldhgbhfjhfjgkhdjfbhbbfbdlpfbko"

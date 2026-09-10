@@ -1,0 +1,29 @@
+---
+layout: default
+permalink: /guides/
+title: "Hiyd guides & how-tos"
+description: "How-to guides for Hiyd: getting started, configuring front matter defaults, publishing posts to GitHub, using Shortcuts and Siri, and deep links."
+breadcrumb: true
+---
+
+<div class="wrap prose-page">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="{{ '/' | relative_url }}">Home</a> / Guides
+  </nav>
+  <div class="page-head">
+    <p class="eyebrow">Guides</p>
+    <h1>Guides &amp; how-tos</h1>
+    <p>Short, practical walkthroughs for getting the most out of Hiyd on iPhone and iPad.</p>
+  </div>
+
+  <div class="guide-list">
+    {% assign guides = site.guides | sort: "order" %}
+    {% for g in guides %}
+    <a class="guide-card" href="{{ g.url | relative_url }}">
+      <h3>{{ g.title }}</h3>
+      <p>{{ g.summary }}</p>
+      <span class="arrow">→</span>
+    </a>
+    {% endfor %}
+  </div>
+</div>

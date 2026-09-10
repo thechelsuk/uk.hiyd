@@ -1,150 +1,96 @@
-# Support
-
-Need help with Hiyd? We're here to assist you!
-
-## 🚀 Quick Start Guides
-
-### iOS App
-
-1. **Download**: Get Hiyd from the [App Store](https://apps.apple.com/us/app/hiyd/id6746853559)
-2. **Open**: Launch the app on your iOS device
-3. **Create**: Start making Jekyll content with front matter
-4. **Export**: Copy your generated markdown to your Jekyll site
-
-### Chrome Extension
-
-1. **Install**: Add Hiyd from the [Chrome Web Store](https://chrome.google.com/webstore/detail/hiyd/hkeklhoojnogpfmiikadpcmkmpldhpce)
-2. **Access**: Click the Hiyd icon in your browser toolbar
-3. **Generate**: Create markdown content directly in your browser
-4. **Save**: Copy the output to your Jekyll project files
-
-## 📋 Common Questions
-
-### General Questions
-
-**Q: Is Hiyd free to use?**
-A: Yes, Hiyd is free to download and use on both iOS and Chrome.
-
-**Q: Do I need an internet connection?**
-A: No, Hiyd works completely offline once installed. Your content never leaves your device.
-
-**Q: Do you collect my data?**
-A: No, we don't collect any personal data. Everything is stored locally on your device. See our [Privacy Policy](https://hiyd.uk/privacy).
-
-**Q: Which Jekyll versions are supported?**
-A: Hiyd generates standard Jekyll markdown format that works with all Jekyll versions.
-
-### iOS App Questions
-
-**Q: What iOS version do I need?**
-A: Hiyd requires iOS 14.0 or later.
-
-**Q: Can I sync between devices?**
-A: Currently, Hiyd stores everything locally for privacy. Cross-device sync is not available.
-
-**Q: Where is my content saved?**
-A: Content is saved in the app's secure local storage on your device.
-
-### Chrome Extension Questions
-
-**Q: Which browsers are supported?**
-A: Currently, Hiyd is available for Chrome and Chromium-based browsers.
-
-**Q: Does it work in incognito mode?**
-A: Yes, but your content won't persist after closing incognito tabs.
-
-**Q: Can I use it offline?**
-A: Yes, once installed, the extension works completely offline.
-
-## 🛠️ Troubleshooting
-
-### iOS App Issues
-
-- App won't open or crashes
-
-    1. Restart your device
-    2. Update to the latest iOS version
-    3. Reinstall the app from the App Store
-    4. Contact support if the issue persists
-
-- Content not saving
-
-    1. Check available device storage
-    2. Ensure the app has necessary permissions
-    3. Try restarting the app
-
-### Chrome Extension Issues
-
-- Extension not appearing
-
-    1. Check that the extension is enabled in Chrome settings
-    2. Try pinning the extension to the toolbar
-    3. Restart Chrome browser
-
-- Content not working properly
-
-    1. Update Chrome to the latest version
-    2. Disable other markdown extensions temporarily
-    3. Clear browser cache and restart
-
-## 🐛 Bug Reports
-
-Found a bug? Help us improve Hiyd:
-
-### How to Report
-
-1. **Email**: Send details to [support@hiyd.uk](mailto:support@hiyd.uk)
-2. **Subject**: Include "BUG REPORT" in the subject line
-3. **Details**: Provide steps to reproduce the issue
-
-### What to Include
-
-- Device/browser and version
-- Hiyd version (check in app/extension settings)
-- Steps to reproduce the bug
-- Expected vs actual behavior
-- Screenshots if applicable
-
-## 💡 Feature Requests
-
-Have an idea for Hiyd? We'd love to hear it!
-
-Send your suggestions to [support@hiyd.uk](mailto:support@hiyd.uk) with:
-
-- Clear description of the feature
-- How it would help your Jekyll workflow
-- Any specific use cases
-
-## 📖 Jekyll Resources
-
-New to Jekyll? Here are some helpful resources:
-
-- [Jekyll Official Documentation](https://jekyllrb.com/docs/)
-- [Jekyll Themes](https://jekyllthemes.io/)
-- [GitHub Pages with Jekyll](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll)
-- [Markdown Guide](https://www.markdownguide.org/)
-
-## 🔗 Additional Resources
-
-- [Privacy Policy](privacy.md)
-- [Terms of Service](terms.md)
-- [Security Policy](security.md)
-- [Website](https://hiyd.uk)
-
-## 📞 Contact Options
-
-- **General Support**: [support@hiyd.uk](mailto:support@hiyd.uk)
-- **Security Issues**: [security@hiyd.uk](mailto:security@hiyd.uk)
-- **Business Inquiries**: [hello@hiyd.uk](mailto:hello@hiyd.uk)
-
-## ⏰ Response Times
-
-We typically respond to support requests within:
-
-- **Critical Issues**: 24 hours
-- **General Questions**: 48-72 hours
-- **Feature Requests**: 1 week
-
+---
+title: "Support"
+eyebrow: "Help"
+summary: "Guides, answers, and how to reach a human."
+description: "Get help with Hiyd: quick start, links to the guides and FAQ, troubleshooting for the iOS app and Chrome extension, and how to report bugs or request features."
 ---
 
-Still need help? Don't hesitate to reach out at [support@hiyd.uk](mailto:support@hiyd.uk) - we're here to help!
+## Start here
+
+- **New to Hiyd?** Read [Getting started](/guides/getting-started/).
+- **Common questions** are answered in the [FAQ](/faq/).
+- **All guides:** [Front matter defaults](/guides/front-matter/) ·
+  [Publish to GitHub](/guides/publish-to-github/) ·
+  [Shortcuts &amp; Siri](/guides/shortcuts-and-siri/) ·
+  [Deep links](/guides/deep-links/).
+
+## Quick start
+
+**iOS app** — Install from the [App Store]({{ site.app_store_url }}) (iOS
+{{ site.min_ios_version }}+), open the **Create** tab, write a title and body,
+then use **••• › Save** to keep the file in iCloud Drive or **••• › Publish** to
+commit it to GitHub.
+
+**Chrome extension** — Install from the
+[Chrome Web Store]({{ site.chrome_store_url }}), open a page you want to link to,
+and use the extension to capture it as a Markdown link post.
+
+## Troubleshooting
+
+### iCloud shows "Unavailable"
+
+Hiyd stores notes in iCloud Drive. If Settings shows iCloud as Unavailable:
+
+1. Check **Settings › [your name] › iCloud › iCloud Drive** is on.
+2. Confirm the device has a network connection and enough storage.
+3. Make sure Hiyd is allowed to use iCloud Drive.
+
+You can still use **Export** to move drafts out manually while iCloud is
+unavailable.
+
+### A post didn't publish to GitHub
+
+- "Unable to access this repository" — re-check the username, the repository name
+  on its own (no `owner/` prefix), and that the token's **Contents** permission
+  is **Read and write** for that repo.
+- "File already exists" — confirm the overwrite prompt, or change the filename.
+- "Too large" — the GitHub Contents API path is limited to 5 MB.
+- "Rate limit reached" — wait and try again.
+
+See the [publishing guide](/guides/publish-to-github/) for the full setup.
+
+### The app won't open or crashes
+
+Restart the device, update to the latest iOS, then reinstall from the App Store.
+If it persists, email us with your device model and iOS version.
+
+### Chrome extension not appearing
+
+Check it is enabled at `chrome://extensions`, pin it to the toolbar, and restart
+the browser.
+
+## Bug reports
+
+Email <support@hiyd.uk> with "BUG REPORT" in the subject and include:
+
+- device / browser and version
+- what you did, what you expected, and what happened
+- a screenshot if you have one
+
+## Feature requests
+
+Send ideas to <support@hiyd.uk> — a short description of the feature and the
+Jekyll workflow it would help.
+
+## Contact
+
+| Purpose | Address |
+| --- | --- |
+| General support | <support@hiyd.uk> |
+| Security issues | <security@hiyd.uk> |
+| Privacy questions | <privacy@hiyd.uk> |
+| Business enquiries | <hello@hiyd.uk> |
+
+Typical response times: critical issues within 24 hours, general questions within
+2–3 days, feature requests within a week.
+
+## Community
+
+- Reddit: [r/hiydapp]({{ site.social.reddit }})
+- Bluesky: [@hiyd.uk]({{ site.social.bluesky }})
+
+## Jekyll resources
+
+- [Jekyll documentation](https://jekyllrb.com/docs/)
+- [GitHub Pages with Jekyll](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll)
+- [Markdown Guide](https://www.markdownguide.org/)

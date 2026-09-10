@@ -1,0 +1,17 @@
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="brand" href="{{ '/' | relative_url }}">
+      <img src="{{ '/assets/hiyd-logo-90.png' | relative_url }}" alt="" width="30" height="30">
+      Hiyd
+    </a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" hidden>
+    <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle menu"><span></span></label>
+    <nav class="site-nav" aria-label="Primary">
+      {%- for item in site.nav -%}
+      <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+      {%- endfor -%}
+      <a href="{{ site.app_store_url }}">Download</a>
+    </nav>
+  </div>
+</header>

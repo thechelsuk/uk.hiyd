@@ -1,0 +1,86 @@
+{%- comment -%} Organization + WebSite: every page {%- endcomment -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "{{ '/#org' | absolute_url }}",
+      "name": "Hiyd UK",
+      "url": "{{ '/' | absolute_url }}",
+      "logo": "{{ '/assets/hiyd-logo-90.png' | absolute_url }}",
+      "sameAs": [
+        "{{ site.social.bluesky }}",
+        "{{ site.social.reddit }}",
+        "{{ site.social.github }}"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "{{ '/#website' | absolute_url }}",
+      "url": "{{ '/' | absolute_url }}",
+      "name": "{{ site.title }}",
+      "description": {{ site.description | strip_newlines | jsonify }},
+      "publisher": { "@id": "{{ '/#org' | absolute_url }}" },
+      "inLanguage": "en-GB"
+    }
+    {%- if page.software_schema -%}
+    ,{
+      "@type": "SoftwareApplication",
+      "@id": "{{ '/#app' | absolute_url }}",
+      "name": "Hiyd",
+      "operatingSystem": "iOS {{ site.min_ios_version }}+, iPadOS {{ site.min_ios_version }}+",
+      "applicationCategory": "ProductivityApplication",
+      "applicationSubCategory": "Static site / Jekyll editor",
+      "downloadUrl": "{{ site.app_store_url }}",
+      "url": "{{ '/' | absolute_url }}",
+      "publisher": { "@id": "{{ '/#org' | absolute_url }}" },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "GBP",
+        "description": "Free download. Optional in-app subscription and tips to support development."
+      },
+      "featureList": [
+        "Markdown editor with live preview",
+        "Automatic YAML front matter with custom default fields",
+        "Publish straight to a GitHub repository",
+        "iCloud Drive storage and sync across iPhone and iPad",
+        "Face ID / Touch ID app lock",
+        "Shortcuts, Siri and App Intents support",
+        "URL scheme deep links for automation"
+      ]
+    }
+    {%- endif -%}
+    {%- if page.breadcrumb -%}
+    ,{
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "{{ '/' | absolute_url }}" },
+        { "@type": "ListItem", "position": 2, "name": "Guides", "item": "{{ '/guides/' | absolute_url }}" }
+        {%- if page.collection == 'guides' -%}
+        ,{ "@type": "ListItem", "position": 3, "name": {{ page.title | jsonify }}, "item": "{{ page.url | absolute_url }}" }
+        {%- endif -%}
+      ]
+    }
+    {%- endif -%}
+  ]
+}
+</script>
+{%- if page.show_faq_schema and site.data.faqs -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {%- for item in site.data.faqs -%}
+    {
+      "@type": "Question",
+      "name": {{ item.q | jsonify }},
+      "acceptedAnswer": { "@type": "Answer", "text": {{ item.a | strip_newlines | jsonify }} }
+    }{%- unless forloop.last -%},{%- endunless -%}
+    {%- endfor -%}
+  ]
+}
+</script>
+{%- endif -%}

@@ -1,103 +1,215 @@
-<!DOCTYPE html>
-<html lang="en">
+---
+layout: home
+title: "Hiyd — Write Jekyll posts on your iPhone and iPad"
+description: "Hiyd is a fast, private iOS app for drafting Markdown posts with YAML front matter and publishing them straight to your Jekyll site on GitHub. Free on the App Store."
+software_schema: true
+show_faq_schema: true
+---
 
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="Content-Security-Policy"
-            content="default-src *; script-src * 'unsafe-inline'; style-src *; upgrade-insecure-requests; block-all-mixed-content">
-        <meta name="referrer" content="origin">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Hiyd - Jekyll Companion Apps and Extensions</title>
-        <meta name="description"
-            content="Hiyd - iOS app and Chrome extension to help generate markdown content for Jekyll sites">
-        <link rel="stylesheet" href="/assets/styles.css">
-        <link rel="icon" type="image/png" href="/assets/favicon-96x96.png" sizes="96x96" />
-        <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
-        <link rel="shortcut icon" href="/assets/favicon.ico" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
-        <link rel="me" href="https://bsky.app/profile/hiyd.uk" />
-        <link rel="me" href="https://hiyd.uk" />
-        <meta name="apple-mobile-web-app-title" content="Hiyd" />
-        <meta name="mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="apple-itunes-app" content="app-id=6746853559, app-argument=hiyd.uk">
-        <link rel="manifest" href="/assets/site.webmanifest" />
-        <link rel="webmention" href="https://webmention.io/thechels.uk/webmention" />
-        <link rel="pingback" href="https://webmention.io/thechels.uk/xmlrpc" />
-        <script src="https://analytics.ahrefs.com/analytics.js" data-key="jsXIy2flcPW8P9Luhx5OfQ" async></script>
-    </head>
+<section class="hero">
+  <div class="wrap hero__grid">
+    <div class="hero__body">
+      <p class="eyebrow">The Jekyll companion app</p>
+      <h1>Write Jekyll posts on your phone. Publish to GitHub.</h1>
+      <p class="lede">
+        Hiyd is a fast, private Markdown editor for iPhone and iPad. Draft a post,
+        let Hiyd build the YAML front matter, then save it to iCloud Drive or
+        commit it straight to your repository.
+      </p>
+      <div class="store-badges">
+        <a class="store-badge" href="{{ site.app_store_url }}">
+          <span class="small">Download on the</span>
+          <span class="large">App Store</span>
+        </a>
+        <a class="store-badge" href="{{ site.chrome_store_url }}">
+          <span class="small">Available in the</span>
+          <span class="large">Chrome Web Store</span>
+        </a>
+      </div>
+      <p class="hero__meta">Free · No account · iOS &amp; iPadOS {{ site.min_ios_version }}+ · Made in the UK</p>
+    </div>
 
-    <body>
-        <div class="site-wrap">
-            <header class="hero">
-                <div class="hero-head">
-                    <div class="brand-mark">
-                        <img src="assets/hiyd-logo-90.png" alt="Hiyd Logo" class="logo">
-                        <div>
-                            <h1>Hiyd</h1>
-                            <p class="tagline">The Jekyll Companion App</p>
-                        </div>
-                    </div>
-                    <div class="cta-buttons">
-                        <a href="https://apps.apple.com/us/app/hiyd/id6746853559" class="btn btn-appstore">
-                            <span class="btn-text-small">Download on the</span>
-                            <span class="btn-text-large">App Store</span>
-                        </a>
-                        <a href="https://chrome.google.com/webstore/detail/hiyd/hkeklhoojnogpfmiikadpcmkmpldhpce"
-                            class="btn btn-chrome">
-                            <span class="btn-text-small">Available in the</span>
-                            <span class="btn-text-large">Chrome Web Store</span>
-                        </a>
-                    </div>
-                </div>
+    <div class="hero__media">
+      <img src="{{ '/assets/iphone-app-screen.png' | relative_url }}"
+           alt="The Hiyd app on iPhone showing the Markdown editor"
+           width="1179" height="2422" loading="eager">
+    </div>
+  </div>
+</section>
 
-                <div class="hero-body">
-                    <div class="hero-info">
-                        <p class="subtitle">Generate markdown content for your Jekyll site with ease.
-                            Create posts with front matter quickly on iOS and capture content for link posts in Chromium
-                            browsers.</p>
+<section class="section section--sunk" id="how">
+  <div class="wrap">
+    <p class="eyebrow">How it works</p>
+    <h2>From idea to committed post in three steps</h2>
+    <div class="steps">
+      <div class="step">
+        <h3>Draft</h3>
+        <p>Type your title and body in a distraction-free Markdown editor. Preview the rendered output any time.</p>
+      </div>
+      <div class="step">
+        <h3>Front matter</h3>
+        <p>Hiyd adds <code>title</code> and <code>date</code> automatically, plus any custom default fields you have configured.</p>
+      </div>
+      <div class="step">
+        <h3>Save or publish</h3>
+        <p>Store the <code>.md</code> file in iCloud Drive, share it anywhere, or commit it to a GitHub repository.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-                        <ul class="hero-features">
-                            <li>Generate markdown content quickly</li>
-                            <li>Create, Save, Edit, Export</li>
-                            <li>Custom front matter defaults</li>
-                            <li>Privacy with iCloud file storage</li>
-                            <li>Quick previews</li>
-                            <li>Biometric locking</li>
-                            <li>iPhone and iPad support</li>
-                            <li>Shortcuts & Siri support</li>
-                        </ul>
+<section class="section" id="features">
+  <div class="wrap">
+    <p class="eyebrow">Features</p>
+    <h2>Everything you need to keep a Jekyll blog going</h2>
+    <p class="section-lead">Built for people who publish with Jekyll and GitHub Pages, and who do half their writing away from a desk.</p>
 
-                        <div class="review-card">
-                            <div class="stars">★★★★★</div>
-                            <p class="review-text">"Perfect for Jekyll users! Makes creating posts so much easier. The
-                                front matter generation is exactly what I needed."</p>
-                            <p class="reviewer">— Sarah K., Developer</p>
-                        </div>
+    <div class="feature-grid">
+      <div class="feature">
+        <span class="feature__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16v16H4z"/><path d="M8 9h8M8 13h8M8 17h5"/></svg></span>
+        <h3>Markdown editor with preview</h3>
+        <p>A clean title-and-body editor with a live rendered preview before you save or export.</p>
+      </div>
+      <div class="feature">
+        <span class="feature__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h16M4 12h16M4 17h10"/><circle cx="19" cy="17" r="2"/></svg></span>
+        <h3>Custom front matter defaults</h3>
+        <p><code>title</code> and <code>date</code> are always included. Add your own Text, List or Boolean fields and reorder them by dragging.</p>
+      </div>
+      <div class="feature">
+        <span class="feature__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 3v12a3 3 0 0 0 3 3h9"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="6" r="3"/></svg></span>
+        <h3>Publish to GitHub</h3>
+        <p>Commit posts to up to five repositories with a fine-grained access token. Choose the folder, name each repo, set a commit-message template.</p>
+      </div>
+      <div class="feature">
+        <span class="feature__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 16a4 4 0 0 1 0-8 5 5 0 0 1 9.6-1.5A3.5 3.5 0 0 1 18 16H6z"/></svg></span>
+        <h3>iCloud Drive storage</h3>
+        <p>Files live in <em>iCloud Drive › Hiyd</em>, sync across your iPhone and iPad, and stay readable in any other app.</p>
+      </div>
+      <div class="feature">
+        <span class="feature__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span>
+        <h3>Face ID app lock</h3>
+        <p>Optionally require Face ID, Touch ID or your passcode every time the app opens.</p>
+      </div>
+      <div class="feature">
+        <span class="feature__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l3 3M15 15l3 3M18 6l-3 3M9 15l-3 3"/></svg></span>
+        <h3>Shortcuts, Siri &amp; deep links</h3>
+        <p>App Intents for creating, listing, reading and searching notes, plus <code>hiyd://</code> URL schemes for automation and widgets.</p>
+      </div>
+      <div class="feature">
+        <span class="feature__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg></span>
+        <h3>Private by default</h3>
+        <p>No analytics, no tracking, no account. The only network call is to GitHub, and only when you publish.</p>
+      </div>
+      <div class="feature">
+        <span class="feature__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg></span>
+        <h3>Make it yours</h3>
+        <p>Light or dark mode, a custom tint colour, and a choice of app icons including a Liquid Glass icon.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-                    </div>
+<section class="section section--sunk">
+  <div class="wrap split">
+    <div class="split__body">
+      <p class="eyebrow">Publish to GitHub</p>
+      <h2>Your repo, your token, one tap</h2>
+      <p class="section-lead">Add a repository once and every post is a commit away — no laptop, no Git client.</p>
+      <ul>
+        <li>Fine-grained personal access token, stored in the iOS Keychain</li>
+        <li>Per-repo folder path — <code>_posts</code> by default</li>
+        <li>Commit-message templates with <code>{filename}</code>, <code>{title}</code> and <code>{datetime}</code></li>
+        <li>Overwrite protection when a file already exists at the path</li>
+        <li>A publish history of your most recent commits</li>
+      </ul>
+      <p style="margin-top:22px"><a class="btn btn--ghost btn--sm" href="{{ '/guides/publish-to-github/' | relative_url }}">Read the publishing guide →</a></p>
+    </div>
+    <div class="split__media">
+      <div class="frontmatter-card">
+        <div class="frontmatter-card__bar"><i></i><i></i><i></i><span>2026-09-10-hello-world.md</span></div>
+<pre><span><b>---</b>
+<b>title:</b> Hello, world
+<b>date:</b> 2026-09-10 09:24:00 +0100
+<b>author:</b> Sam
+<b>tags:</b> [jekyll, ios, writing]
+<b>draft:</b> false
+<b>---</b>
 
-                    <div class="hero-media">
-                        <img src="assets/iphone-app-screen.png" alt="Hiyd App on iPhone" class="phone-image">
-                    </div>
-                </div>
-            </header>
+Written on the train, committed before
+the next stop.</span></pre>
+      </div>
+    </div>
+  </div>
+</section>
 
-            <footer class="footer">
-                <div class="footer-links">
-                    <a href="/privacy" class="footer-link" title="Privacy Policy">Privacy Policy</a>
-                    <a href="/terms" class="footer-link" title="Terms of Service">Terms of Service</a>
-                    <a href="/security" class="footer-link" title="Security">Security</a>
-                    <a href="/support" class="footer-link" title="Support">Support</a>
-                    <a href="/sitemap.xml" class="footer-link" title="Sitemap">Sitemap</a>
-                    <a href="https://reddit.com/r/hiydapp" class="footer-link" title="Community (Reddit)">Community
-                        (Reddit)</a>
-                    <a href="https://bsky.app/profile/hiyd.uk" class="footer-link" title="Bluesky">Bluesky</a>
-                </div>
-                <p class="footer-text">&copy; 2026 Hiyd UK - Made with love in the UK by <a
-                        href="https://thechels.uk">thechelsuk</a></p>
-            </footer>
-        </div>
-    </body>
+<section class="section" id="guides">
+  <div class="wrap">
+    <p class="eyebrow">Guides</p>
+    <h2>Set it up the way you work</h2>
+    <div class="guide-list">
+      <a class="guide-card" href="{{ '/guides/getting-started/' | relative_url }}">
+        <h3>Getting started</h3>
+        <p>Install Hiyd, write your first post and export it to your site.</p>
+        <span class="arrow">→</span>
+      </a>
+      <a class="guide-card" href="{{ '/guides/front-matter/' | relative_url }}">
+        <h3>Front matter defaults</h3>
+        <p>Configure the fields every new note should start with.</p>
+        <span class="arrow">→</span>
+      </a>
+      <a class="guide-card" href="{{ '/guides/publish-to-github/' | relative_url }}">
+        <h3>Publish to GitHub</h3>
+        <p>Create a token, add a repository and commit posts from your phone.</p>
+        <span class="arrow">→</span>
+      </a>
+      <a class="guide-card" href="{{ '/guides/shortcuts-and-siri/' | relative_url }}">
+        <h3>Shortcuts &amp; Siri</h3>
+        <p>Every App Intent Hiyd exposes, with example automations.</p>
+        <span class="arrow">→</span>
+      </a>
+      <a class="guide-card" href="{{ '/guides/deep-links/' | relative_url }}">
+        <h3>Deep links</h3>
+        <p>The <code>hiyd://</code> URL scheme for widgets and automation.</p>
+        <span class="arrow">→</span>
+      </a>
+      <a class="guide-card" href="{{ '/guides/link-posts/' | relative_url }}">
+        <h3>Link posts with the Chrome extension</h3>
+        <p>Capture a quote and its source, then publish a linked post.</p>
+        <span class="arrow">→</span>
+      </a>
+    </div>
+  </div>
+</section>
 
-</html>
+<section class="section section--sunk" id="faq-home">
+  <div class="wrap">
+    <p class="eyebrow">FAQ</p>
+    <h2>Questions people ask</h2>
+    <div class="faq">
+      {% for item in site.data.faqs limit:6 %}
+      <details>
+        <summary>{{ item.q }}</summary>
+        <div><p>{{ item.a }}</p></div>
+      </details>
+      {% endfor %}
+    </div>
+    <p style="margin-top:24px"><a class="btn btn--ghost btn--sm" href="{{ '/faq/' | relative_url }}">See all {{ site.data.faqs | size }} questions →</a></p>
+  </div>
+</section>
+
+<section class="section cta-band">
+  <div class="wrap">
+    <h2>Keep your Jekyll blog moving</h2>
+    <p class="section-lead" style="margin-inline:auto">Free on the App Store. No account, no tracking, your files in your iCloud Drive.</p>
+    <div class="store-badges">
+      <a class="store-badge" href="{{ site.app_store_url }}">
+        <span class="small">Download on the</span>
+        <span class="large">App Store</span>
+      </a>
+      <a class="store-badge" href="{{ site.chrome_store_url }}">
+        <span class="small">Available in the</span>
+        <span class="large">Chrome Web Store</span>
+      </a>
+    </div>
+  </div>
+</section>

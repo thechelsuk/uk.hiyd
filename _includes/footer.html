@@ -1,0 +1,59 @@
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="site-footer__grid">
+      <div class="site-footer__brand">
+        <a class="brand" href="{{ '/' | relative_url }}">
+          <img src="{{ '/assets/hiyd-logo-90.png' | relative_url }}" alt="" width="28" height="28">
+          Hiyd
+        </a>
+        <p>The Jekyll companion app. Draft Markdown posts with front matter on iPhone and iPad, then publish straight to GitHub.</p>
+      </div>
+
+      <div>
+        <h4>Product</h4>
+        <ul>
+          <li><a href="{{ '/#features' | relative_url }}">Features</a></li>
+          <li><a href="{{ site.app_store_url }}">iOS app</a></li>
+          <li><a href="{{ site.chrome_store_url }}">Chrome extension</a></li>
+          <li><a href="{{ '/faq/' | relative_url }}">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Guides</h4>
+        <ul>
+          <li><a href="{{ '/guides/getting-started/' | relative_url }}">Getting started</a></li>
+          <li><a href="{{ '/guides/front-matter/' | relative_url }}">Front matter defaults</a></li>
+          <li><a href="{{ '/guides/publish-to-github/' | relative_url }}">Publish to GitHub</a></li>
+          <li><a href="{{ '/guides/shortcuts-and-siri/' | relative_url }}">Shortcuts &amp; Siri</a></li>
+          <li><a href="{{ '/guides/deep-links/' | relative_url }}">Deep links</a></li>
+          <li><a href="{{ '/guides/link-posts/' | relative_url }}">Link posts (Chrome)</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="{{ '/support/' | relative_url }}">Support</a></li>
+          <li><a href="{{ '/privacy/' | relative_url }}">Privacy</a></li>
+          <li><a href="{{ '/terms/' | relative_url }}">Terms</a></li>
+          <li><a href="{{ '/security/' | relative_url }}">Security</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Community</h4>
+        <ul>
+          <li><a href="{{ site.social.reddit }}" rel="me">Reddit</a></li>
+          <li><a href="{{ site.social.bluesky }}" rel="me">Bluesky</a></li>
+          <li><a href="{{ site.social.github }}">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="site-footer__legal">
+      <span>&copy; {{ 'now' | date: "%Y" }} Hiyd UK. Made in the UK by <a href="https://thechels.uk">thechelsuk</a>.</span>
+      <span>Not affiliated with or endorsed by the Jekyll project.</span>
+    </div>
+  </div>
+</footer>
