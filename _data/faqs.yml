@@ -1,0 +1,95 @@
+- q: "What is Hiyd?"
+  a: >-
+    Hiyd is an iOS app for people who run a Jekyll site. You draft a post in a
+    plain Markdown editor, Hiyd adds correct YAML front matter, and you can save
+    the file to iCloud Drive, share it, or publish it straight to your GitHub
+    repository. A companion Chrome extension captures link posts from the browser.
+
+- q: "How much does Hiyd cost?"
+  a: >-
+    Hiyd is free to download and use. There is an optional annual "Supporter"
+    subscription and one-off Small, Medium and Large tips inside the app if you
+    want to support development. None of the core features are locked behind a
+    purchase.
+
+- q: "Which devices and iOS versions are supported?"
+  a: >-
+    Hiyd runs on iPhone and iPad and requires iOS 18.6 or iPadOS 18.6 or later.
+    The interface adapts to a sidebar layout on iPad and supports all
+    orientations.
+
+- q: "Where are my posts stored?"
+  a: >-
+    Notes are stored as .md files in your own iCloud Drive, in Files under iCloud
+    Drive › Hiyd. Because they live in iCloud Drive they sync automatically across
+    your iPhone and iPad and you can open them in any other app. Hiyd has no
+    server and no account.
+
+- q: "Does Hiyd sync between my iPhone and iPad?"
+  a: >-
+    Yes. Files are kept in iCloud Drive, so anything you save on one device
+    appears on your other devices signed in to the same Apple Account. If iCloud
+    Drive is turned off, Hiyd shows its status as Unavailable and you can still
+    export files manually.
+
+- q: "How does publishing to GitHub work?"
+  a: >-
+    In Settings › GitHub Publishing you add a repository: GitHub username,
+    repository name, a folder path (default is _posts), and a fine-grained
+    personal access token scoped to that repository with Contents set to Read and
+    write. When you publish, Hiyd commits the Markdown file to that folder on the
+    repository's default branch using the GitHub Contents API. You can store up
+    to five repositories and give each one its own name, icon and colour.
+
+- q: "Is my GitHub token safe?"
+  a: >-
+    The token is stored in the iOS Keychain. It cannot be viewed or edited after
+    saving; to change it you remove the repository and add it again. Hiyd talks
+    only to api.github.com when you publish, and only sends the file you are
+    publishing. Use a fine-grained token limited to the single repository so its
+    scope is minimal.
+
+- q: "Can I customise the front matter?"
+  a: >-
+    Yes. title and date are always included and cannot be removed. In Settings ›
+    Front Matter you can add your own default fields as Text, List or Boolean
+    values, reorder them by dragging, and delete them by swiping. Every new note
+    starts with those fields filled in.
+
+- q: "Does Hiyd work with Shortcuts and Siri?"
+  a: >-
+    Yes. Hiyd ships App Intents for creating a note, creating and saving a file,
+    listing files, reading a file's content, searching notes and opening a
+    specific page or file. You can trigger them from the Shortcuts app, Siri, or
+    automations.
+
+- q: "Are there URL scheme deep links?"
+  a: >-
+    Yes. hiyd://create, hiyd://archive and hiyd://settings open those pages;
+    hiyd://create?title=...&body=... pre-fills the editor; and
+    hiyd://file?filename=example.md&restore=true opens a saved file for editing.
+    Deep links work from Notes, Messages, widgets and the Shortcuts "Open URLs"
+    action.
+
+- q: "Does Hiyd collect any data or analytics?"
+  a: >-
+    No. Hiyd has no analytics, no tracking and no accounts. Your content stays in
+    your iCloud Drive and on your device. The only outbound network request the
+    app makes is to GitHub, and only when you choose to publish.
+
+- q: "Can I lock the app?"
+  a: >-
+    Yes. Turn on Biometric Lock in Settings to require Face ID, Touch ID or your
+    device passcode each time Hiyd opens.
+
+- q: "What file formats does Hiyd use?"
+  a: >-
+    Hiyd reads and writes .md and .txt files. Exported and published files are
+    standard Markdown with a YAML front matter block, compatible with any Jekyll
+    version and with GitHub Pages.
+
+- q: "What does the Chrome extension do?"
+  a: >-
+    The Hiyd Chrome extension is for link posts: it captures the current page so
+    you can turn it into a Markdown link post for your Jekyll site. It works in
+    Chrome and other Chromium browsers and is built on Manifest V3.

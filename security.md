@@ -1,152 +1,57 @@
-# Security Policy
+---
+title: "Security"
+eyebrow: "Legal"
+summary: "How Hiyd is built to be safe, and how to report a vulnerability."
+last_updated: "10 September 2026"
+description: "Hiyd's security model: local-first storage in iCloud Drive, GitHub tokens in the iOS Keychain, minimal network surface, and how to report a security issue."
+---
 
-**Last updated:** _June 3, 2025_
+Hiyd is designed to keep its attack surface small. This page describes how it
+works and how to report a problem.
 
-## Our Security Commitment
+## Architecture
 
-Hiyd is designed with security and privacy as core principles. This document outlines our security practices and how to report security concerns.
+- **Local-first.** Writing, previewing, saving and exporting happen entirely on
+  your device. Posts are stored as files in your iCloud Drive.
+- **One outbound connection.** The app contacts a single external service —
+  `api.github.com` — and only when you publish a post. There is no Hiyd server,
+  telemetry endpoint or third-party SDK phoning home.
+- **No accounts.** There are no credentials for us to lose.
 
-## Security Architecture
+## Credential handling
 
-### Local-First Design
+- **GitHub personal access tokens** are stored in the **iOS Keychain**. They are
+  write-once from your perspective: after saving, a token cannot be displayed or
+  edited — you remove and re-add the repository to change it.
+- We recommend **fine-grained** tokens scoped to a single repository with
+  **Contents: Read and write** and nothing else, so a compromised token affects
+  only that repo.
 
-- **No Server Communication**: Hiyd operates entirely on your device
-- **No Data Transmission**: Your content never leaves your device
-- **Offline Operation**: Full functionality without internet connection
-- **No User Accounts**: No authentication or account management required
+## Platform protections
 
-### Data Security
+- Runs inside the iOS application sandbox.
+- Optional **biometric lock** (Face ID / Touch ID / passcode) gates app launch.
+- Distributed through the App Store and the Chrome Web Store, both of which review
+  submissions. The Chrome extension uses Manifest V3 with minimal permissions.
 
-- **Local Storage Only**: All data stored in device-specific secure storage
-- **No Cloud Sync**: Eliminates remote attack vectors
-- **Minimal Permissions**: Apps request only essential device permissions
-- **Sandboxed Execution**: Runs within platform security sandboxes
+## Reporting a vulnerability
 
-## Platform Security
+Please report security issues privately:
 
-### iOS App Security
+- **Email:** <security@hiyd.uk> with "SECURITY" in the subject.
+- **GitHub:** open a private advisory at
+  <https://github.com/thechelsuk/uk.hiyd/security/advisories/new>.
 
-- **App Store Review**: Vetted through Apple's security review process
-- **iOS Sandbox**: Operates within iOS security sandbox
-- **Keychain Integration**: Uses iOS Keychain for secure preference storage
-- **Code Signing**: Digitally signed and verified
+Include reproduction steps and an impact assessment if you can. Please give us a
+reasonable window to fix the issue before any public disclosure.
 
-### Chrome Extension Security
+### What to expect
 
-- **Manifest V3**: Built using the latest Chrome extension security standards
-- **Minimal Permissions**: Requests only necessary permissions
-- **Content Security Policy**: Implements strict CSP headers
-- **Extension Store Review**: Reviewed by Chrome Web Store security team
+- Acknowledgement within **48 hours**.
+- An initial assessment within **1 week**.
+- A target of **30 days** to resolve serious issues, with updates along the way.
 
-## Supported Versions
+## Your part
 
-We provide security updates for:
-
-| Version | Supported          |
-| ------- | ------------------ |
-| Latest  | ✅ Yes             |
-| Previous| ✅ Yes (6 months)  |
-| Older   | ❌ No              |
-
-## Reporting Security Vulnerabilities
-
-We take security seriously. If you discover a security vulnerability, please:
-
-### How to Report
-
-1. **Email**: Send details to <security@hiyd.uk>
-2. **Subject Line**: Include "SECURITY" in the subject
-3. **Information**: Provide detailed reproduction steps
-4. **Responsible Disclosure**: Allow us time to address before public disclosure
-
-### What to Include
-
-- Description of the vulnerability
-- Steps to reproduce the issue
-- Potential impact assessment
-- Your contact information (optional)
-
-### Response Timeline
-
-- **Acknowledgment**: Within 48 hours
-- **Initial Assessment**: Within 1 week
-- **Resolution**: Target 30 days for critical issues
-- **Updates**: Regular communication throughout process
-
-## Security Best Practices for Users
-
-### Device Security
-
-- Keep your device OS updated
-- Use device lock screens and biometric authentication
-- Install apps only from official stores
-- Regular device backups
-
-### Content Security
-
-- Review generated content before publishing
-- Keep local content backups
-- Use secure Jekyll hosting practices
-- Follow Jekyll security guidelines
-
-## Known Security Considerations
-
-### Local Storage Limitations
-
-- Data security depends on device security
-- Physical device access could expose local data
-- Device theft or loss affects data security
-- No remote wipe capabilities
-
-### Browser Extension Considerations
-
-- Browser security affects extension security
-- Shared computer usage may expose data
-- Browser sync may replicate local data
-- Extension updates require user action
-
-## Security Updates
-
-We regularly:
-
-- Monitor for security vulnerabilities
-- Update dependencies and frameworks
-- Review and improve security practices
-- Coordinate with platform security teams
-
-## Third-Party Security
-
-Since Hiyd operates locally:
-
-- No third-party data processors
-- No external API dependencies
-- No cloud service integrations
-- Minimal attack surface
-
-## Compliance
-
-### Privacy Compliance
-
-- GDPR compliant (no data collection)
-- CCPA compliant (no data sale)
-- COPPA compliant (no child data collection)
-
-### Platform Compliance
-
-- Apple App Store guidelines
-- Chrome Web Store policies
-- Platform security requirements
-
-## Contact
-
-For security concerns or questions:
-
-- **Security Email**: <security@hiyd.uk>
-- **General Support**: <support@hiyd.uk>
-- **Website**: hiyd.uk
-
-## Security Philosophy
-
-Hiyd's security model is built on the principle that the most secure data is data that never leaves your device. By operating entirely locally, we eliminate entire classes of security vulnerabilities associated with data transmission, cloud storage, and remote processing.
-
-Your content remains under your complete control, protected by your device's security measures and your own security practices.
+Keep your device OS current, use a device passcode and biometrics, install apps
+only from official stores, and review generated content before you publish it.

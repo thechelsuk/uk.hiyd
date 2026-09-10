@@ -1,29 +1,63 @@
 # Hiyd
 
-> Hiyd is the Jekyll Companion App — a suite of apps and extensions that help you generate markdown content for your Jekyll site.
-Create posts with front matter quickly on iOS, and capture content for link posts in Chromium browsers.
+> Hiyd is the Jekyll companion app: a fast, private iOS app for iPhone and iPad that lets you
+> draft Markdown posts with YAML front matter and publish them straight to a GitHub repository.
+> A companion Chrome extension captures link posts from Chromium browsers.
 
-Hiyd is made in the UK by thechels.uk. Key features include quick markdown generation; create, save, edit, and export workflows;
-custom front matter defaults; privacy via iCloud file storage; quick previews; biometric locking; iPhone and iPad support;
-and Shortcuts & Siri integration. Version 2.0 also includes direct to GitHub publishing using personal access tokens.
+Hiyd is made in the UK by thechels.uk. It is free, with an optional subscription and tips to
+support development. Requires iOS / iPadOS 18.6 or later.
+
+Key facts:
+- Posts are stored as .md files in the user's own iCloud Drive (Files › iCloud Drive › Hiyd) and
+  sync across the user's devices. There is no Hiyd account and no Hiyd server.
+- `title` and `date` front matter are always included. Users can add custom default fields as
+  Text, List or Boolean values, reorder them, and delete them.
+- GitHub publishing: add up to five repositories, each with a fine-grained personal access token
+  (Contents: Read and write) stored in the iOS Keychain. Files are committed to a folder
+  (default `_posts`) on the repository's default branch via the GitHub Contents API. Commit
+  message templates support {filename}, {title}, {datetime}. 5 MB file limit.
+- No analytics or tracking in the app. The only outbound network request is to api.github.com,
+  and only when the user chooses to publish.
+- Face ID / Touch ID / passcode app lock is optional.
+- Shortcuts / Siri via App Intents: Create Note, Create File, List Files, Get File,
+  Get File Content, Search Notes, Open Page, Open File.
+- Deep links: hiyd://create, hiyd://archive, hiyd://settings,
+  hiyd://create?title=...&body=..., hiyd://file?filename=example.md&restore=true
+- Appearance: light/dark mode, custom tint colour, multiple app icons.
+- File formats: reads and writes .md and .txt. Output is standard Jekyll-compatible Markdown.
+- Chrome extension (separate tool, Manifest V3): select text on a page, right-click > "Hiyd
+  Capture", and save a Markdown quote post. Front matter fields: date, title, cited (page
+  author), link (page URL), seo (page description), tags (page keywords), plus up to 5 custom
+  key/value pairs set in the extension's settings. Each selected line is prefixed with "> ".
+  Designed for Daring Fireball-style linked list / quote posts.
 
 ## Apps & Extensions
 
-- [Hiyd on the App Store](https://apps.apple.com/us/app/hiyd/id6746853559): iOS app for creating Jekyll posts with front matter on iPhone and iPad.
-- [Hiyd on the Chrome Web Store](https://chrome.google.com/webstore/detail/hiyd/hkeklhoojnogpfmiikadpcmkmpldhpce): Chromium browser extension for capturing content for link posts.
+- [Hiyd on the App Store](https://apps.apple.com/gb/app/hiyd/id6746853559): iOS and iPadOS app.
+- [Hiyd on the Chrome Web Store](https://chromewebstore.google.com/detail/hiyd/hkeklhoojnogpfmiikadpcmkmpldhpce): Chromium browser extension for link posts.
+
+## Guides
+
+- [Getting started](https://hiyd.uk/guides/getting-started/)
+- [Front matter defaults](https://hiyd.uk/guides/front-matter/)
+- [Publish posts to GitHub](https://hiyd.uk/guides/publish-to-github/)
+- [Shortcuts, Siri & App Intents](https://hiyd.uk/guides/shortcuts-and-siri/)
+- [Deep links (the hiyd:// URL scheme)](https://hiyd.uk/guides/deep-links/)
+- [Link posts with the Chrome extension](https://hiyd.uk/guides/link-posts/)
 
 ## Documentation & Policies
 
-- [Privacy Policy](https://hiyd.uk/privacy): How Hiyd handles user data and privacy.
-- [Terms of Service](https://hiyd.uk/terms): Terms governing use of Hiyd apps and services.
-- [Security](https://hiyd.uk/security): Security practices and information.
-- [Support](https://hiyd.uk/support): Help and support resources.
+- [FAQ](https://hiyd.uk/faq/): common questions about pricing, storage, sync and publishing.
+- [Support](https://hiyd.uk/support/): troubleshooting and contact details.
+- [Privacy Policy](https://hiyd.uk/privacy/): what Hiyd does and does not collect.
+- [Terms of Service](https://hiyd.uk/terms/): terms for the apps and services.
+- [Security](https://hiyd.uk/security/): security model and vulnerability reporting.
 
 ## Community
 
-- [Community (Reddit)](https://reddit.com/r/hiydapp): Hiyd community subreddit.
-- [Bluesky](https://bsky.app/profile/hiyd.uk): Hiyd on Bluesky.
+- [Reddit](https://reddit.com/r/hiydapp)
+- [Bluesky](https://bsky.app/profile/hiyd.uk)
 
 ## Optional
 
-- [thechels.uk](https://thechels.uk): The maker of Hiyd.
+- [thechels.uk](https://thechels.uk): the maker of Hiyd.

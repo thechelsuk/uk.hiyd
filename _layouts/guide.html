@@ -1,0 +1,31 @@
+---
+layout: default
+breadcrumb: true
+---
+<div class="wrap prose-page">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="{{ '/' | relative_url }}">Home</a> / <a href="{{ '/guides/' | relative_url }}">Guides</a> / {{ page.title }}
+  </nav>
+  <div class="page-head">
+    <p class="eyebrow">Guide</p>
+    <h1>{{ page.title }}</h1>
+    {% if page.summary %}<p>{{ page.summary }}</p>{% endif %}
+  </div>
+  <article class="prose">
+    {{ content }}
+  </article>
+
+  {% assign others = site.guides | where_exp: "g", "g.url != page.url" | sort: "order" %}
+  {% if others.size > 0 %}
+  <hr style="margin:48px 0;border:none;border-top:1px solid var(--line)">
+  <h2 style="font-size:1.1rem">More guides</h2>
+  <div class="guide-list">
+    {% for g in others %}
+    <a class="guide-card" href="{{ g.url | relative_url }}">
+      <h3>{{ g.title }}</h3>
+      <p>{{ g.summary }}</p>
+    </a>
+    {% endfor %}
+  </div>
+  {% endif %}
+</div>

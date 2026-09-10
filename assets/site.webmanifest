@@ -1,6 +1,11 @@
 {
-  "name": "Hiyd",
+  "name": "Hiyd — The Jekyll Companion App",
   "short_name": "Hiyd",
+  "description": "Write Jekyll posts with front matter on iPhone and iPad, then publish to GitHub.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fbfbf9",
+  "theme_color": "#12924a",
   "icons": [
     {
       "src": "/assets/web-app-manifest-192x192.png",
@@ -14,8 +19,5 @@
       "type": "image/png",
       "purpose": "maskable"
     }
-  ],
-  "theme_color": "#ffffff",
-  "background_color": "#ffffff",
-  "display": "standalone"
+  ]
 }

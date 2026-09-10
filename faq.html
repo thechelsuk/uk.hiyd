@@ -1,0 +1,25 @@
+---
+layout: default
+permalink: /faq/
+title: "Hiyd FAQ — pricing, iCloud sync, GitHub publishing"
+description: "Answers about Hiyd: cost, supported devices, where posts are stored, iCloud sync, publishing to GitHub, Shortcuts, deep links and privacy."
+eyebrow: "Frequently asked questions"
+show_faq_schema: true
+---
+
+<div class="wrap prose-page">
+  <div class="page-head">
+    <p class="eyebrow">Frequently asked questions</p>
+    <h1>Hiyd FAQ</h1>
+    <p>Everything about how Hiyd stores your posts, syncs with iCloud, and publishes to GitHub. Still stuck? <a href="{{ '/support/' | relative_url }}">Contact support</a>.</p>
+  </div>
+
+  <div class="faq">
+    {% for item in site.data.faqs %}
+    <details>
+      <summary>{{ item.q }}</summary>
+      <div><p>{{ item.a }}</p></div>
+    </details>
+    {% endfor %}
+  </div>
+</div>

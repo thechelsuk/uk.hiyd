@@ -1,65 +1,78 @@
-# Privacy Policy
+---
+title: "Privacy Policy"
+eyebrow: "Legal"
+summary: "What Hiyd does and does not collect, and where your content lives."
+last_updated: "10 September 2026"
+description: "Hiyd's privacy policy: no accounts, no analytics in the app, content stored in your own iCloud Drive, and GitHub contacted only when you choose to publish."
+---
 
-**Last updated:** _June 9, 2025_
+Hiyd ("we", "our", "us") makes the Hiyd iOS app and the Hiyd Chrome extension.
+This policy explains what happens to your information when you use them and this
+website.
 
-## Overview
+## The short version
 
-Hiyd ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and protect your information when you use our website, apps and extensions.
+- **No account.** There is nothing to sign up for.
+- **No analytics or tracking in the app.** We do not measure how you use Hiyd.
+- **Your content stays yours.** Posts are stored in *your* iCloud Drive and on
+  your device, not on our servers — we have none.
+- **We contact one external service, GitHub, and only when you ask us to** by
+  publishing a post.
 
-## Information We Collect
+## What the iOS app stores, and where
 
-### Information We Don't Collect
+- **Your posts** are saved as `.md` files in your iCloud Drive, in the folder
+  *iCloud Drive › Hiyd*. Apple syncs that folder between your devices. We cannot
+  see its contents.
+- **Settings** (appearance, default front matter fields, the biometric-lock
+  preference) are stored locally on the device via the system preferences store.
+- **GitHub personal access tokens**, if you add a repository for publishing, are
+  stored in the **iOS Keychain**. They are not synced to us and cannot be
+  displayed again after you save them.
 
-- **Personal Data**: We do not collect, store, or transmit any personal information
-- **Usage Analytics**: We do not track your usage patterns or behaviour
-- **Account Information**: No account creation or login is required
-- **Content Data**: Your markdown content and Jekyll posts remain entirely in your iCloud drive or local device.
+## When Hiyd connects to the internet
 
-### Local Storage Only
+The app works offline for writing, previewing, saving and exporting. It makes a
+network request in one situation only:
 
-- All your data is stored locally on your device
-- Settings and preferences are saved in your browser's local storage (Chrome extension) or iCloud (iOS app)
-- No data is transmitted to our servers or any third-party services
+- **Publishing to GitHub.** When you choose **Publish**, Hiyd sends the single
+  Markdown file you are publishing, and your commit message, to
+  `api.github.com`, authenticated with the token you provided. This is a direct
+  connection between your device and GitHub. GitHub's handling of that request is
+  covered by [GitHub's Privacy Statement](https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement).
 
-## How We Use Information
+Hiyd does not send your content anywhere else, and does not contact us at all.
 
-Since we don't collect personal information, we cannot use it. All processing happens locally on your device:
+## The Chrome extension
 
-- Markdown generation and formatting
-- Jekyll front matter creation
-- Content preview and editing
+The extension captures the page you are on so you can turn it into a Markdown link
+post. It stores its working data in your browser's local storage. It does not
+send your data to us or to third parties.
 
-## Data Security
+## This website
 
-- **Local Processing**: All operations are performed locally on your device
-- **No Server Communication**: The app does not communicate with external servers
-- **No Data Transmission**: Your content never leaves your device or iCloud drive
-- **Device Security**: Your data security depends on your device's security measures
+`hiyd.uk` is a static site hosted on GitHub Pages. It uses
+[Ahrefs Web Analytics](https://ahrefs.com/web-analytics), a cookieless analytics
+script that records aggregate page views without profiling individual visitors or
+setting tracking cookies. Server request logs are handled by GitHub Pages and
+Cloudflare as our hosting and CDN providers.
 
-## Third-Party Services
+## Children
 
-Hyd does not integrate with or share data with any third-party services. The app operates entirely offline after installation.
+Hiyd is not directed at children and collects no personal information from anyone,
+so no information is collected from children.
 
-## Children's Privacy
+## Your rights
 
-Our app does not collect any information from anyone, including children under 13. Since no data is collected, COPPA compliance is inherent in our design.
+Because we hold no personal data about you, there is nothing for us to provide,
+correct or delete. Your posts are under your control in iCloud Drive; you can
+edit or delete them at any time in Hiyd or the Files app.
 
-## Changes to This Policy
+## Changes
 
-We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated "Last updated" date.
+We may update this policy. Material changes will be noted here with a new "last
+updated" date.
 
-## Contact Us
+## Contact
 
-If you have questions about this Privacy Policy, please contact us at:
-
-- Email: <privacy@hiyd.uk>
-
-## Your Rights
-
-Since we don't collect personal data:
-
-- There is no data to access, modify, or delete
-- No data portability is needed as everything stays on your device
-- You maintain complete control over your information
-
-This privacy-first approach ensures your content and usage patterns remain completely private and under your control.
+Questions about privacy: <privacy@hiyd.uk>

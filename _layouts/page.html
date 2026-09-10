@@ -1,0 +1,14 @@
+---
+layout: default
+---
+<div class="wrap prose-page">
+  <div class="page-head">
+    {% if page.eyebrow %}<p class="eyebrow">{{ page.eyebrow }}</p>{% endif %}
+    <h1>{{ page.title }}</h1>
+    {% if page.summary %}<p>{{ page.summary }}</p>{% endif %}
+    {% if page.last_updated %}<p class="last-updated">Last updated: {{ page.last_updated }}</p>{% endif %}
+  </div>
+  <article class="prose">
+    {{ content }}
+  </article>
+</div>
