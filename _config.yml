@@ -1,6 +1,9 @@
 # --- Site identity -----------------------------------------------------------
-title: "Hiyd — The Jekyll Companion App"
-tagline: "Write Jekyll posts on your iPhone and iPad"
+# Kept short on purpose: jekyll-seo-tag appends "| {{ site.title }}" to every
+# page <title> and uses it for og:site_name / the WebSite JSON-LD name, so a
+# long value here doubles up on every page and gets truncated in search results.
+title: "Hiyd"
+tagline: "The Jekyll Companion App"
 description: >-
   Hiyd is a fast, private iOS app for drafting Markdown posts with YAML front
   matter and publishing them straight to your Jekyll site on GitHub. A Chrome
@@ -36,7 +39,13 @@ min_ios_version: "18.6"
 
 # jekyll-seo-tag
 logo: /assets/hiyd-logo-90.png
-image: /assets/hiyd-logo-90.png
+# Social share card (og:image / twitter:image). Square 1024x1024 app icon is
+# used for the Organization/structured-data logo instead — see logo: above.
+image:
+  path: /assets/og-card.png
+  width: 1200
+  height: 630
+  alt: "Hiyd — the Jekyll companion app for iPhone and iPad"
 
 # `social` is consumed both by our templates (reddit/bluesky/github) and by
 # jekyll-seo-tag (name/links -> Organization sameAs).
@@ -69,7 +78,9 @@ collections:
 
 defaults:
   - scope: { path: "" }
-    values: { layout: "page", image: "/assets/hiyd-logo-90.png" }
+    values:
+      layout: "page"
+      image: { path: "/assets/og-card.png", width: 1200, height: 630, alt: "Hiyd — the Jekyll companion app for iPhone and iPad" }
   - scope: { path: "", type: "guides" }
     values: { layout: "guide" }
   - scope: { path: "index.html" }
