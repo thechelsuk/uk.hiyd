@@ -1,7 +1,8 @@
 ---
 title: "Publish posts to GitHub"
 summary: "Create a fine-grained token, add a repository, and commit posts from your phone."
-description: "Step-by-step: create a GitHub fine-grained personal access token, add a repository to Hiyd, set the folder and commit message template, and publish Markdown posts from iOS."
+description: "Create a GitHub fine-grained access token, add a repository to Hiyd, set the folder and commit template, and publish Markdown posts from iOS."
+date: 2026-09-10
 order: 3
 ---
 

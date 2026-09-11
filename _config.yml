@@ -1,6 +1,9 @@
 # --- Site identity -----------------------------------------------------------
-title: "Hiyd — The Jekyll Companion App"
-tagline: "Write Jekyll posts on your iPhone and iPad"
+# Kept short on purpose: jekyll-seo-tag appends "| {{ site.title }}" to every
+# page <title> and uses it for og:site_name / the WebSite JSON-LD name, so a
+# long value here doubles up on every page and gets truncated in search results.
+title: "Hiyd"
+tagline: "The Jekyll Companion App"
 description: >-
   Hiyd is a fast, private iOS app for drafting Markdown posts with YAML front
   matter and publishing them straight to your Jekyll site on GitHub. A Chrome

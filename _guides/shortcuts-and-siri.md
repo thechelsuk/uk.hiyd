@@ -1,7 +1,8 @@
 ---
 title: "Shortcuts, Siri & App Intents"
 summary: "Every action Hiyd exposes to the Shortcuts app, Siri and automations."
-description: "Reference for Hiyd's App Intents: Create Note, Create File, List Files, Get File, Get File Content, Search Notes, Open Page and Open File, with example Shortcuts automations."
+description: "Reference for Hiyd's App Intents: Create Note, List Files, Get File Content, Search Notes and more, with example Shortcuts automations."
+date: 2026-09-10
 order: 4
 ---
 

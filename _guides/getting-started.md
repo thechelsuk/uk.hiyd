@@ -2,6 +2,7 @@
 title: "Getting started with Hiyd"
 summary: "Install the app, write your first post, and get the Markdown onto your Jekyll site."
 description: "A first walkthrough of Hiyd for iOS: writing a post, adding front matter, previewing, and saving or exporting the Markdown file for your Jekyll site."
+date: 2026-09-10
 order: 1
 ---
 

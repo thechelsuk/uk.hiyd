@@ -1,7 +1,8 @@
 ---
 title: "Deep links (the hiyd:// URL scheme)"
 summary: "Open pages, pre-fill the editor and jump to a saved file from any app."
-description: "Reference for Hiyd's hiyd:// URL scheme: create, archive and settings links, pre-filling a note with title and body, and opening a saved file for editing."
+description: "Reference for Hiyd's hiyd:// URL scheme: create, archive and settings links, pre-filling a note, and opening a saved file for editing."
+date: 2026-09-10
 order: 5
 ---
 

@@ -1,7 +1,8 @@
 ---
 title: "Front matter defaults"
 summary: "Set the YAML fields every new note should start with — author, tags, categories, flags."
-description: "How to configure default YAML front matter fields in Hiyd: Text, List and Boolean field types, reordering, the reserved title and date fields, and the YAML output."
+description: "How to configure default YAML front matter fields in Hiyd: Text, List and Boolean field types, reordering, and the reserved title and date fields."
+date: 2026-09-10
 order: 2
 ---
 

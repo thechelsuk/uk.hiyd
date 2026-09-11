@@ -1,7 +1,8 @@
 ---
 title: "Link posts with the Chrome extension"
 summary: "Capture a quote and its source metadata from any page and turn it into a Daring Fireball-style linked post."
-description: "How to use the Hiyd Chrome extension to capture selected text and page metadata as a Markdown quote post with Jekyll front matter, and wire it into a linkpost layout."
+description: "Use the Hiyd Chrome extension to capture selected text and page metadata as a Markdown quote post with Jekyll front matter, then wire it into a linkpost layout."
+date: 2026-09-10
 order: 6
 ---
 
