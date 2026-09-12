@@ -1,21 +1,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script data-cfasync="false">
-  // Apply a saved theme override before first paint, so there's no flash of
-  // the wrong theme. The footer toggle is what writes this key.
-  // data-cfasync="false" opts this out of Cloudflare Rocket Loader, which
-  // otherwise rewrites the script `type` so it never runs natively and is
-  // instead re-executed later by Rocket Loader's own (often blocked) script
-  // — defeating the entire point of an early, synchronous, pre-paint check.
-  (function () {
-    try {
-      var stored = localStorage.getItem("hiyd-theme");
-      if (stored === "light" || stored === "dark") {
-        document.documentElement.setAttribute("data-theme", stored);
-      }
-    } catch (e) {}
-  })();
-</script>
+<!-- Blocking (no defer/async) and before the stylesheet on purpose: applies
+     a saved theme override before first paint, so there's no flash of the
+     wrong theme. data-cfasync="false" opts it out of Cloudflare Rocket
+     Loader, which otherwise rewrites the script `type` so it never runs
+     natively and is instead re-executed later by Rocket Loader's own
+     (sometimes blocked) script. External + same-origin so it also runs
+     under a strict `default-src 'self'` CSP with no 'unsafe-inline'. -->
+<script src="{{ '/assets/js/theme-init.js' | relative_url }}" data-cfasync="false"></script>
 <meta name="theme-color" id="theme-color-light" content="#f8f4e9" media="(prefers-color-scheme: light)">
 <meta name="theme-color" id="theme-color-dark" content="#17130c" media="(prefers-color-scheme: dark)">
 <meta name="referrer" content="strict-origin-when-cross-origin">
@@ -24,7 +16,6 @@
 {% seo %}
 
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link rel="icon" type="image/png" href="/assets/favicon-96x96.png" sizes="96x96">
 <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">

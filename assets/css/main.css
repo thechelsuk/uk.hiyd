@@ -5,7 +5,66 @@
    not a generic dark-mode SaaS template. Light + dark via prefers-color-scheme.
    ========================================================================= */
 
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+/* Self-hosted (latin subset only) instead of a Google Fonts @import, so the
+   site works under a strict `default-src 'self'` CSP with no exceptions
+   needed for fonts.googleapis.com / fonts.gstatic.com. Regenerate with
+   scripts/fetch-fonts.sh if the families/weights below ever change. */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/assets/fonts/Fraunces-600.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/assets/fonts/Fraunces-700.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/assets/fonts/Inter-400.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/assets/fonts/Inter-500.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/assets/fonts/Inter-600.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/assets/fonts/Inter-700.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/assets/fonts/JetBrainsMono-400.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/assets/fonts/JetBrainsMono-500.woff2') format('woff2');
+}
 
 :root {
   --bg:          #f8f4e9;
@@ -152,6 +211,13 @@ kbd {
   margin-bottom: 14px;
 }
 .section-lead { max-width: 46ch; color: var(--ink-soft); font-size: 1.06rem; margin-top: 14px; }
+.section-lead--center { margin-inline: auto; }
+
+.error-page { text-align: center; }
+.button-row { margin-top: 28px; display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+
+.section-divider { margin: 48px 0; border: none; border-top: 1px solid var(--line); }
+.more-guides-heading { font-size: 1.1rem; }
 
 /* --- buttons --------------------------------------------------------- */
 .btn {
