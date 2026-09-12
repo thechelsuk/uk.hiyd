@@ -5,7 +5,7 @@
 
 Generate markdown content for your Jekyll sites with ease. Create posts with front matter quickly on iOS and Chrome.
 
-## ✨ Features
+## Features
 
 - **Quick Markdown Generation**: Create Jekyll-formatted markdown content instantly
 - **Front Matter Support**: Automatically generate proper YAML front matter
@@ -15,7 +15,7 @@ Generate markdown content for your Jekyll sites with ease. Create posts with fro
 - **Offline Ready**: Works completely offline once installed
 - **Live Preview**: See your content formatted before saving
 
-## 🚀 Getting Started
+## Getting Started
 
 ### iOS App
 
@@ -31,7 +31,7 @@ Generate markdown content for your Jekyll sites with ease. Create posts with fro
 3. Create markdown content directly in your browser
 4. Save or copy to your Jekyll project
 
-## 📝 Use Cases
+## Use Cases
 
 - **Blog Posts**: Quickly create new blog posts with proper front matter
 - **Documentation**: Generate markdown pages for documentation sites
@@ -39,7 +39,7 @@ Generate markdown content for your Jekyll sites with ease. Create posts with fro
 - **Learning**: Practice Jekyll and markdown formatting
 - **Content Migration**: Convert existing content to Jekyll format
 
-## 🔒 Privacy & Security
+## Privacy & Security
 
 Hiyd is built with privacy as a core principle:
 
@@ -50,7 +50,7 @@ Hiyd is built with privacy as a core principle:
 
 Read our full [Privacy Policy](https://hiyd.uk/privacy) and [Security Policy](https://hiyd.uk/security).
 
-## 🛠️ Technical Details
+## Technical Details
 
 ### Supported Jekyll Features
 
@@ -66,12 +66,12 @@ Read our full [Privacy Policy](https://hiyd.uk/privacy) and [Security Policy](ht
 - **Chrome**: Chrome 88 or later
 - **Storage**: Minimal local storage usage
 
-## 📱 Screenshots
+## Screenshots
 
 *iOS App Interface*
 ![Hiyd iOS App](assets/iphone-app-screen.png)
 
-## 🆘 Support
+## Support
 
 Need help? We're here for you:
 
@@ -79,13 +79,13 @@ Need help? We're here for you:
 - Website: [hiyd.uk](https://hiyd.uk)
 - Reddit: [r/hiydapp](https://www.reddit.com/r/hiydapp/)
 
-## 📄 Legal
+## Legal
 
 - [Terms of Service](terms.md)
 - [Privacy Policy](privacy.md)
 - [Security Policy](security.md)
 
-## 🏗️ Built For Jekyll Users
+## Built For Jekyll Users
 
 Hiyd is specifically designed for Jekyll users who want to streamline their content creation workflow. Whether you're maintaining a personal blog, documentation site, or company website, Hiyd makes Jekyll content creation faster and more enjoyable.
 
