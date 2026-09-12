@@ -17,8 +17,8 @@ breadcrumb: true
 
   {% assign others = site.guides | where_exp: "g", "g.url != page.url" | sort: "order" %}
   {% if others.size > 0 %}
-  <hr style="margin:48px 0;border:none;border-top:1px solid var(--line)">
-  <h2 style="font-size:1.1rem">More guides</h2>
+  <hr class="section-divider">
+  <h2 class="more-guides-heading">More guides</h2>
   <div class="guide-list">
     {% for g in others %}
     <a class="guide-card" href="{{ g.url | relative_url }}">
