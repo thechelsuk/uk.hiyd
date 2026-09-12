@@ -5,8 +5,10 @@ og:image / twitter:image (wired up in _config.yml).
 
 Usage:
     python3 -m venv .venv && .venv/bin/pip install Pillow
-    # Fonts aren't committed to the repo; fetch the two variable TTFs used here:
+    # Fonts aren't committed to the repo; fetch the three variable TTFs used here:
     mkdir -p scripts/fonts
+    curl -sL -o scripts/fonts/Fraunces.ttf \
+        "https://raw.githubusercontent.com/google/fonts/main/ofl/fraunces/Fraunces%5BSOFT,WONK,opsz,wght%5D.ttf"
     curl -sL -o scripts/fonts/Inter.ttf \
         "https://raw.githubusercontent.com/google/fonts/main/ofl/inter/Inter%5Bopsz,wght%5D.ttf"
     curl -sL -o scripts/fonts/JetBrainsMono.ttf \
@@ -29,15 +31,15 @@ LOGO_PATH = ROOT / "assets" / "hiyd-logo-90.png"
 W, H = 1200, 630
 
 # Dark-mode palette from assets/css/main.css
-BG = (13, 15, 12)
-PANEL = (23, 26, 21)
-INK = (243, 245, 239)
-INK_SOFT = (185, 192, 176)
-INK_FAINT = (135, 142, 125)
-LINE = (38, 42, 34)
-LINE_STRONG = (54, 59, 48)
-ACCENT = (63, 208, 127)
-ACCENT_INK = (126, 227, 168)
+BG = (23, 19, 12)
+PANEL = (34, 28, 19)
+INK = (242, 234, 217)
+INK_SOFT = (200, 189, 159)
+INK_FAINT = (148, 136, 108)
+LINE = (51, 42, 26)
+LINE_STRONG = (69, 56, 36)
+ACCENT = (87, 181, 127)
+ACCENT_INK = (141, 214, 168)
 
 HEADLINE = "Write Jekyll posts on your iPhone and iPad."
 SUBHEAD = ["Draft Markdown with front matter, then publish", "straight to your GitHub repository."]
@@ -61,6 +63,14 @@ MARGIN = 64
 def inter(size, weight=400, opsz=None):
     f = ImageFont.truetype(str(FONT_DIR / "Inter.ttf"), size)
     f.set_variation_by_axes([opsz or min(32, max(14, size)), weight])
+    return f
+
+
+def fraunces(size, weight=700, opsz=None):
+    f = ImageFont.truetype(str(FONT_DIR / "Fraunces.ttf"), size)
+    # axes order: [Optical Size, Weight, Softness, Wonky] — keep Soft/Wonky at
+    # 0 to match the non-wonky static instances loaded on the site itself.
+    f.set_variation_by_axes([opsz or min(144, max(9, size)), weight, 0, 0])
     return f
 
 
@@ -124,19 +134,20 @@ def main():
     logo = logo.resize((logo_size, logo_size), Image.LANCZOS)
     img.paste(logo, (MARGIN, MARGIN), logo)
 
-    wm_font = inter(28, 700, 24)
-    draw.text((MARGIN + logo_size + 16, MARGIN + (logo_size - 28) // 2 - 2), "Hiyd", font=wm_font, fill=INK)
+    wm_font = fraunces(30, 700)
+    wm_x = MARGIN + logo_size + 16
+    wm_x2 = draw_measured(draw, (wm_x, MARGIN + (logo_size - 30) // 2 - 3), "Hiyd", wm_font, INK)
 
     eyebrow_font = mono(17, 600)
-    ex = MARGIN + logo_size + 90
+    ex = wm_x2 + 28
     tracked_text(draw, (ex, MARGIN + (logo_size - 17) // 2 - 1), "THE JEKYLL COMPANION APP", eyebrow_font, ACCENT_INK, tracking=2)
 
     # Headline + subhead
-    head_font = inter(58, 700, 32)
-    y = 176
-    for line in wrap(draw, HEADLINE, head_font, 630):
+    head_font = fraunces(60, 700, 72)
+    y = 172
+    for line in wrap(draw, HEADLINE, head_font, 640):
         draw.text((MARGIN, y), line, font=head_font, fill=INK)
-        y += 68
+        y += 70
 
     sub_font = inter(25, 400, 20)
     y += 14
