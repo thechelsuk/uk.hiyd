@@ -1,8 +1,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script>
+<script data-cfasync="false">
   // Apply a saved theme override before first paint, so there's no flash of
   // the wrong theme. The footer toggle is what writes this key.
+  // data-cfasync="false" opts this out of Cloudflare Rocket Loader, which
+  // otherwise rewrites the script `type` so it never runs natively and is
+  // instead re-executed later by Rocket Loader's own (often blocked) script
+  // — defeating the entire point of an early, synchronous, pre-paint check.
   (function () {
     try {
       var stored = localStorage.getItem("hiyd-theme");

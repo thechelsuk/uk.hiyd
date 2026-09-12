@@ -73,7 +73,10 @@
   </div>
 </footer>
 
-<script>
+<script data-cfasync="false">
+  // data-cfasync="false" — see the comment in _includes/head.html; without
+  // it Cloudflare's Rocket Loader can rewrite/defer this past the point
+  // where clicking the button appears to do nothing.
   (function () {
     var STORAGE_KEY = "hiyd-theme";
     var btn = document.getElementById("theme-toggle");
