@@ -1,7 +1,19 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#fbfbf9" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0d0f0c" media="(prefers-color-scheme: dark)">
+<script>
+  // Apply a saved theme override before first paint, so there's no flash of
+  // the wrong theme. The footer toggle is what writes this key.
+  (function () {
+    try {
+      var stored = localStorage.getItem("hiyd-theme");
+      if (stored === "light" || stored === "dark") {
+        document.documentElement.setAttribute("data-theme", stored);
+      }
+    } catch (e) {}
+  })();
+</script>
+<meta name="theme-color" id="theme-color-light" content="#f8f4e9" media="(prefers-color-scheme: light)">
+<meta name="theme-color" id="theme-color-dark" content="#17130c" media="(prefers-color-scheme: dark)">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 {% if page.noindex %}<meta name="robots" content="noindex, follow">{% endif %}
 
