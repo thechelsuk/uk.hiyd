@@ -389,7 +389,7 @@ kbd {
 
 /* --- CTA band ----------------------------------------------- */
 .cta-band { text-align: center; }
-.cta-band h2 { max-width: 20ch; margin-inline: auto; }
+.cta-band h2 { max-width: 34ch; margin-inline: auto; }
 .cta-band .store-badges { justify-content: center; margin-top: 30px; }
 
 /* --- prose (legal + guides) ------------------------------- */
