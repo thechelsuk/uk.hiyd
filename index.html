@@ -16,16 +16,7 @@ show_faq_schema: true
         let Hiyd build the YAML front matter, then save it to iCloud Drive or
         commit it straight to your repository.
       </p>
-      <div class="store-badges">
-        <a class="store-badge" href="{{ site.app_store_url }}">
-          <span class="small">Download on the</span>
-          <span class="large">App Store</span>
-        </a>
-        <a class="store-badge" href="{{ site.chrome_store_url }}">
-          <span class="small">Available in the</span>
-          <span class="large">Chrome Web Store</span>
-        </a>
-      </div>
+      {% include store-badges.html suffix="-hero" %}
       <p class="hero__meta">Free · No account · iOS &amp; iPadOS {{ site.min_ios_version }}+ · Made in the UK</p>
     </div>
 
@@ -201,15 +192,6 @@ the next stop.</span></pre>
   <div class="wrap">
     <h2>Keep your Jekyll blog moving</h2>
     <p class="section-lead" style="margin-inline:auto">Free on the App Store. No account, no tracking, your files in your iCloud Drive.</p>
-    <div class="store-badges">
-      <a class="store-badge" href="{{ site.app_store_url }}">
-        <span class="small">Download on the</span>
-        <span class="large">App Store</span>
-      </a>
-      <a class="store-badge" href="{{ site.chrome_store_url }}">
-        <span class="small">Available in the</span>
-        <span class="large">Chrome Web Store</span>
-      </a>
-    </div>
+    {% include store-badges.html suffix="-cta" %}
   </div>
 </section>

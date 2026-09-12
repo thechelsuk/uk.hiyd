@@ -1,46 +1,49 @@
 /* =========================================================================
    Hiyd — design system
-   Fresh / modern / minimal. Light + dark via prefers-color-scheme.
+   Warm, editorial and print-inspired: paper tones, a deep pine-green ink
+   accent, and a serif display face for headings — built for a writing app,
+   not a generic dark-mode SaaS template. Light + dark via prefers-color-scheme.
    ========================================================================= */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 
 :root {
-  --bg:          #fbfbf9;
-  --bg-sunk:     #f2f3ef;
-  --panel:       #ffffff;
-  --ink:         #10130f;
-  --ink-soft:    #4b5145;
-  --ink-faint:   #6f766a;
-  --line:        #e5e6df;
-  --line-strong: #d3d5c9;
-  --accent:      #12924a;
-  --accent-ink:  #0c6c37;
-  --accent-wash: #e7f4ec;
-  --focus:       #12924a;
-  --radius:      14px;
-  --radius-lg:   22px;
-  --shadow-sm:   0 1px 2px rgba(16, 19, 15, .06), 0 1px 3px rgba(16, 19, 15, .04);
-  --shadow-md:   0 14px 40px rgba(16, 19, 15, .10);
+  --bg:          #f8f4e9;
+  --bg-sunk:     #efe8d5;
+  --panel:       #fffdf6;
+  --ink:         #221d15;
+  --ink-soft:    #5c5341;
+  --ink-faint:   #8a8069;
+  --line:        #e5dcc3;
+  --line-strong: #d3c6a3;
+  --accent:      #1f6d46;
+  --accent-ink:  #17532f;
+  --accent-wash: #e6efe2;
+  --focus:       #1f6d46;
+  --radius:      10px;
+  --radius-lg:   16px;
+  --shadow-sm:   0 1px 2px rgba(34, 29, 21, .06), 0 1px 3px rgba(34, 29, 21, .05);
+  --shadow-md:   0 14px 36px rgba(34, 29, 21, .12);
   --maxw:        1080px;
   --font-sans:   'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-display:'Fraunces', 'Iowan Old Style', Georgia, serif;
   --font-mono:   'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg:          #0d0f0c;
-    --bg-sunk:     #131611;
-    --panel:       #171a15;
-    --ink:         #f3f5ef;
-    --ink-soft:    #b9c0b0;
-    --ink-faint:   #878e7d;
-    --line:        #262a22;
-    --line-strong: #363b30;
-    --accent:      #3fd07f;
-    --accent-ink:  #7ee3a8;
-    --accent-wash: #16241b;
-    --focus:       #3fd07f;
+    --bg:          #17130c;
+    --bg-sunk:     #1d1810;
+    --panel:       #221c13;
+    --ink:         #f2ead9;
+    --ink-soft:    #c8bd9f;
+    --ink-faint:   #94886c;
+    --line:        #332a1a;
+    --line-strong: #453824;
+    --accent:      #57b57f;
+    --accent-ink:  #8dd6a8;
+    --accent-wash: #1e2a20;
+    --focus:       #57b57f;
     --shadow-sm:   0 1px 2px rgba(0, 0, 0, .4);
     --shadow-md:   0 18px 50px rgba(0, 0, 0, .5);
   }
@@ -72,10 +75,10 @@ a:hover { text-decoration: underline; }
   border-radius: 4px;
 }
 
-h1, h2, h3, h4 { line-height: 1.15; letter-spacing: -0.02em; font-weight: 700; }
-h1 { font-size: clamp(2.3rem, 6vw, 3.6rem); }
-h2 { font-size: clamp(1.6rem, 3.5vw, 2.3rem); }
-h3 { font-size: 1.18rem; letter-spacing: -0.01em; }
+h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.1; letter-spacing: -0.01em; font-weight: 700; }
+h1 { font-size: clamp(2.4rem, 6vw, 3.75rem); }
+h2 { font-size: clamp(1.7rem, 3.5vw, 2.4rem); }
+h3 { font-size: 1.22rem; font-weight: 600; }
 
 code, kbd, pre, samp { font-family: var(--font-mono); font-size: .9em; }
 :not(pre) > code {
@@ -141,22 +144,26 @@ kbd {
 .btn--sm { padding: 9px 16px; font-size: .92rem; }
 
 .store-badges { display: flex; flex-wrap: wrap; gap: 14px; }
+/* Fixed white/black regardless of theme, like Apple's and Google's own badge
+   artwork — these are brand marks, not themed UI, so they shouldn't invert. */
 .store-badge {
   display: inline-flex;
-  flex-direction: column;
-  justify-content: center;
-  min-width: 190px;
-  padding: 11px 20px;
-  border-radius: 14px;
-  border: 1px solid var(--line-strong);
-  background: var(--panel);
-  color: var(--ink);
-  box-shadow: var(--shadow-sm);
+  align-items: center;
+  gap: 12px;
+  min-width: 210px;
+  padding: 10px 20px 10px 16px;
+  border-radius: 12px;
+  border: 1px solid #dcdcdc;
+  background: #ffffff;
+  color: #1d1d1f;
+  box-shadow: 0 1px 2px rgba(0,0,0,.08), 0 8px 20px rgba(0,0,0,.10);
   transition: transform .12s ease, box-shadow .12s ease;
 }
-.store-badge:hover { text-decoration: none; transform: translateY(-2px); box-shadow: var(--shadow-md); }
-.store-badge .small { font-size: .72rem; color: var(--ink-faint); letter-spacing: .02em; }
-.store-badge .large { font-size: 1.12rem; font-weight: 700; letter-spacing: -0.01em; }
+.store-badge:hover { text-decoration: none; transform: translateY(-2px); box-shadow: 0 2px 4px rgba(0,0,0,.1), 0 14px 28px rgba(0,0,0,.16); }
+.store-badge svg { flex: none; width: 30px; height: 30px; }
+.store-badge .text { display: flex; flex-direction: column; }
+.store-badge .small { font-size: .72rem; color: #6e6e73; letter-spacing: .01em; }
+.store-badge .large { font-size: 1.08rem; font-weight: 700; letter-spacing: -0.01em; color: #1d1d1f; }
 
 /* --- header --------------------------------------------------------- */
 .site-header {
@@ -176,7 +183,7 @@ kbd {
   margin-inline: auto;
   padding-inline: 22px;
 }
-.brand { display: inline-flex; align-items: center; gap: 10px; font-weight: 700; color: var(--ink); letter-spacing: -0.01em; }
+.brand { display: inline-flex; align-items: center; gap: 10px; font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; color: var(--ink); letter-spacing: -0.01em; }
 .brand:hover { text-decoration: none; }
 .brand img { width: 30px; height: 30px; border-radius: 8px; }
 .site-nav { margin-left: auto; display: flex; align-items: center; gap: 26px; }
@@ -234,16 +241,23 @@ kbd {
 .hero__media { position: relative; display: flex; justify-content: center; }
 .hero__media img {
   width: min(300px, 78vw);
-  border-radius: 38px;
+  border-radius: 30px;
   border: 1px solid var(--line);
   box-shadow: var(--shadow-md);
 }
+/* A quiet editorial touch instead of a SaaS gradient glow: an oversized
+   quotation mark, since Hiyd's whole job is quoting/writing posts. */
 .hero__media::after {
-  content: "";
+  content: "\201C";
   position: absolute;
-  inset: auto -20% -30% -20%;
-  height: 60%;
-  background: radial-gradient(50% 50% at 50% 50%, var(--accent-wash), transparent 70%);
+  top: -0.4em;
+  left: 50%;
+  transform: translateX(-58%);
+  font-family: var(--font-display);
+  font-size: 13rem;
+  line-height: 1;
+  color: var(--line-strong);
+  opacity: .55;
   z-index: -1;
 }
 @media (max-width: 860px) {
