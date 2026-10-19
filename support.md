@@ -86,7 +86,6 @@ Typical response times: critical issues within 24 hours, general questions withi
 
 ## Community
 
-- Reddit: [r/hiydapp]({{ site.social.reddit }})
 - Bluesky: [@hiyd.uk]({{ site.social.bluesky }})
 
 ## Jekyll resources

@@ -47,16 +47,14 @@ image:
   height: 630
   alt: "Hiyd — the Jekyll companion app for iPhone and iPad"
 
-# `social` is consumed both by our templates (reddit/bluesky/github) and by
+# `social` is consumed both by our templates (bluesky/github) and by
 # jekyll-seo-tag (name/links -> Organization sameAs).
 social:
   name: Hiyd
-  reddit: "https://reddit.com/r/hiydapp"
   bluesky: "https://bsky.app/profile/hiyd.uk"
   github: "https://github.com/thechelsuk/uk.hiyd"
   links:
     - https://bsky.app/profile/hiyd.uk
-    - https://reddit.com/r/hiydapp
     - https://github.com/thechelsuk/uk.hiyd
 
 # --- Navigation ----------------------------------------------------------
