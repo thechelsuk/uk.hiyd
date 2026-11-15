@@ -1,0 +1,16 @@
+name: Link Checker
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 6 * * 1"
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  links:
+    uses: thechelsuk/workflows/.github/workflows/link-checker.yml@main
+    with:
+      site_host: hiyd\.uk
