@@ -21,6 +21,8 @@ encoding: UTF-8
 future: false
 permalink: /:slug/
 
+repository: thechelsuk/uk.hiyd
+
 github:
   repository_url: https://github.com/thechelsuk/uk.hiyd
   branch: main
