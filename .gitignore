@@ -1,3 +1,5 @@
 .DS_Store
 scripts/fonts/
 scripts/.venv/
+_site/
+.jekyll-cache/

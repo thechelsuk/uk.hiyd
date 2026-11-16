@@ -14,3 +14,4 @@ jobs:
     uses: thechelsuk/workflows/.github/workflows/link-checker.yml@main
     with:
       site_host: hiyd\.uk
+      ruby_version: "3.3"
