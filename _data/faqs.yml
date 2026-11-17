@@ -93,3 +93,13 @@
     The Hiyd Chrome extension is for link posts: it captures the current page so
     you can turn it into a Markdown link post for your Jekyll site. It works in
     Chrome and other Chromium browsers and is built on Manifest V3.
+
+- q: "Found a bug or have an idea?"
+  a: >-
+    Tell me on GitHub: <a href="https://github.com/thechelsuk/uk.hiyd/issues/new/choose">raise an issue</a>
+    and choose the form for a bug, a feature request, a question or general
+    feedback. You'll need a free GitHub account.
+
+- q: "Can I just email you?"
+  a: >-
+    Yes. Email <a href="mailto:feedback@hiyd.uk">feedback@hiyd.uk</a>.

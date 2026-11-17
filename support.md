@@ -52,31 +52,32 @@ See the [publishing guide](/guides/publish-to-github/) for the full setup.
 ### The app won't open or crashes
 
 Restart the device, update to the latest iOS, then reinstall from the App Store.
-If it persists, email us with your device model and iOS version.
+If it persists, email <feedback@hiyd.uk> with your device model and iOS
+version.
 
 ### Chrome extension not appearing
 
 Check it is enabled at `chrome://extensions`, pin it to the toolbar, and restart
 the browser.
 
-## Bug reports
+## Bug reports and feature requests
 
-Email <support@hiyd.uk> with "BUG REPORT" in the subject and include:
+Report a bug or suggest a feature by
+[raising an issue on GitHub](https://github.com/thechelsuk/uk.hiyd/issues/new/choose),
+then choose the form for a bug, a feature request, a question or general
+feedback. You'll need a free GitHub account.
 
-- device / browser and version
+Or email <feedback@hiyd.uk>. For a bug, include:
+
+- your device or browser and its version
 - what you did, what you expected, and what happened
 - a screenshot if you have one
-
-## Feature requests
-
-Send ideas to <support@hiyd.uk> — a short description of the feature and the
-Jekyll workflow it would help.
 
 ## Contact
 
 | Purpose | Address |
 | --- | --- |
-| General support | <support@hiyd.uk> |
+| General support and feedback | <feedback@hiyd.uk> |
 | Security issues | <security@hiyd.uk> |
 | Privacy questions | <privacy@hiyd.uk> |
 | Business enquiries | <hello@hiyd.uk> |
