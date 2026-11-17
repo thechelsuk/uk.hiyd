@@ -4,6 +4,7 @@ title: "Write Jekyll posts on your iPhone and iPad"
 description: "Hiyd is a fast, private iOS app for drafting Markdown posts with YAML front matter and publishing them straight to your Jekyll site on GitHub."
 software_schema: true
 show_faq_schema: true
+faq_limit: 6
 ---
 
 <section class="hero">
@@ -177,7 +178,7 @@ the next stop.</span></pre>
     <p class="eyebrow">FAQ</p>
     <h2>Questions people ask</h2>
     <div class="faq">
-      {% for item in site.data.faqs limit:6 %}
+      {% for item in site.data.faqs limit: page.faq_limit %}
       <details>
         <summary>{{ item.q }}</summary>
         <div><p>{{ item.a }}</p></div>

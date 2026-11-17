@@ -72,7 +72,8 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {%- for item in site.data.faqs -%}
+    {%- assign faq_limit = page.faq_limit | default: site.data.faqs.size -%}
+    {%- for item in site.data.faqs limit: faq_limit -%}
     {
       "@type": "Question",
       "name": {{ item.q | jsonify }},
