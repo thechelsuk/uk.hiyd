@@ -18,7 +18,7 @@ faq_limit: 6
         commit it straight to your repository.
       </p>
       {% include store-badges.html suffix="-hero" %}
-      <p class="hero__meta">Free · No account · iOS &amp; iPadOS {{ site.min_ios_version }}+ · Made in the UK</p>
+      <p class="hero__meta">Free · No account · iOS and iPadOS {{ site.min_ios_version }} or later · Made in the UK</p>
     </div>
 
     <div class="hero__media">
@@ -36,15 +36,15 @@ faq_limit: 6
     <div class="steps">
       <div class="step">
         <h3>Draft</h3>
-        <p>Type your title and body in a distraction-free Markdown editor. Preview the rendered output any time.</p>
+        <p>Type your title and body in a distraction-free Markdown editor, with a keyboard bar for formatting. Preview the rendered output any time.</p>
       </div>
       <div class="step">
         <h3>Front matter</h3>
-        <p>Hiyd adds <code>title</code> and <code>date</code> automatically, plus any custom default fields you have configured.</p>
+        <p>Hiyd adds <code>title</code> and <code>date</code> automatically, plus your default fields. Change them for each post as you need.</p>
       </div>
       <div class="step">
         <h3>Save or publish</h3>
-        <p>Store the <code>.md</code> file in iCloud Drive, share it anywhere, or commit it to a GitHub repository.</p>
+        <p>Store the <code>.md</code> file in iCloud Drive or on your device, share it anywhere, or commit it to a GitHub repository.</p>
       </div>
     </div>
   </div>
@@ -60,22 +60,22 @@ faq_limit: 6
       <div class="feature">
         <span class="feature__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16v16H4z"/><path d="M8 9h8M8 13h8M8 17h5"/></svg></span>
         <h3>Markdown editor with preview</h3>
-        <p>A clean title-and-body editor with a live rendered preview before you save or export.</p>
+        <p>A clean title-and-body editor with a keyboard bar for bold, links, headings, lists and quotes. On iPad and the unfolded iPhone Duo, the rendered post sits beside the editor and updates as you type.</p>
       </div>
       <div class="feature">
         <span class="feature__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h16M4 12h16M4 17h10"/><circle cx="19" cy="17" r="2"/></svg></span>
-        <h3>Custom front matter defaults</h3>
-        <p><code>title</code> and <code>date</code> are always included. Add your own Text, List or Boolean fields and reorder them by dragging.</p>
+        <h3>Front matter, post by post</h3>
+        <p><code>title</code> and <code>date</code> are always included. New posts start with your own Text, List or Boolean defaults, and each post keeps its own front matter when you edit it.</p>
       </div>
       <div class="feature">
         <span class="feature__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 3v12a3 3 0 0 0 3 3h9"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="6" r="3"/></svg></span>
         <h3>Publish to GitHub</h3>
-        <p>Commit posts to up to five repositories with a fine-grained access token. Choose the folder, name each repo, set a commit-message template.</p>
+        <p>Commit posts to up to five repositories with a fine-grained access token. Choose the folder and branch, name each repo, set a commit-message template.</p>
       </div>
       <div class="feature">
         <span class="feature__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 16a4 4 0 0 1 0-8 5 5 0 0 1 9.6-1.5A3.5 3.5 0 0 1 18 16H6z"/></svg></span>
         <h3>iCloud Drive storage</h3>
-        <p>Files live in <em>iCloud Drive › Hiyd</em>, sync across your iPhone and iPad, and stay readable in any other app.</p>
+        <p>Files live in <em>iCloud Drive › Hiyd</em>, sync across your iPhone and iPad, and stay readable in any other app. With iCloud Drive off, they're saved on your device until you turn it on.</p>
       </div>
       <div class="feature">
         <span class="feature__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span>
@@ -84,8 +84,13 @@ faq_limit: 6
       </div>
       <div class="feature">
         <span class="feature__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l3 3M15 15l3 3M18 6l-3 3M9 15l-3 3"/></svg></span>
-        <h3>Shortcuts, Siri &amp; deep links</h3>
-        <p>App Intents for creating, listing, reading and searching notes, plus <code>hiyd://</code> URL schemes for automation and widgets.</p>
+        <h3>Shortcuts, Siri and deep links</h3>
+        <p>App Intents for creating, listing, reading, searching and publishing posts, plus <code>hiyd://</code> URL schemes for automation and widgets.</p>
+      </div>
+      <div class="feature">
+        <span class="feature__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 15V3M8 7l4-4 4 4"/><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7"/></svg></span>
+        <h3>Share to Hiyd</h3>
+        <p>Share text or a link from Safari or any app. Selected text becomes a quote, and the link goes into the front matter as <code>source</code>.</p>
       </div>
       <div class="feature">
         <span class="feature__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg></span>
@@ -110,6 +115,7 @@ faq_limit: 6
       <ul>
         <li>Fine-grained personal access token, stored in the iOS Keychain</li>
         <li>Per-repo folder path — <code>_posts</code> by default</li>
+        <li>An optional branch per repo, created from the default branch the first time you publish</li>
         <li>Commit-message templates with <code>{filename}</code>, <code>{title}</code> and <code>{datetime}</code></li>
         <li>Overwrite protection when a file already exists at the path</li>
         <li>A publish history of your most recent commits</li>
@@ -121,7 +127,7 @@ faq_limit: 6
         <div class="frontmatter-card__bar"><i></i><i></i><i></i><span>2026-09-10-hello-world.md</span></div>
 <pre><span><b>---</b>
 <b>title:</b> Hello, world
-<b>date:</b> 2026-09-10 09:24:00 +0100
+<b>date:</b> 2026-09-10
 <b>author:</b> Sam
 <b>tags:</b> [jekyll, ios, writing]
 <b>draft:</b> false
@@ -155,13 +161,18 @@ the next stop.</span></pre>
         <span class="arrow">→</span>
       </a>
       <a class="guide-card" href="{{ '/guides/shortcuts-and-siri/' | relative_url }}">
-        <h3>Shortcuts &amp; Siri</h3>
+        <h3>Shortcuts and Siri</h3>
         <p>Every App Intent Hiyd exposes, with example automations.</p>
         <span class="arrow">→</span>
       </a>
       <a class="guide-card" href="{{ '/guides/deep-links/' | relative_url }}">
         <h3>Deep links</h3>
         <p>The <code>hiyd://</code> URL scheme for widgets and automation.</p>
+        <span class="arrow">→</span>
+      </a>
+      <a class="guide-card" href="{{ '/guides/share-to-hiyd/' | relative_url }}">
+        <h3>Share to Hiyd</h3>
+        <p>Turn text or a link from any app into a new post.</p>
         <span class="arrow">→</span>
       </a>
       <a class="guide-card" href="{{ '/guides/link-posts/' | relative_url }}">
@@ -175,8 +186,8 @@ the next stop.</span></pre>
 
 <section class="section section--sunk" id="faq-home">
   <div class="wrap">
-    <p class="eyebrow">FAQ</p>
-    <h2>Questions people ask</h2>
+    <p class="eyebrow">Questions</p>
+    <h2>Frequently asked questions</h2>
     <div class="faq">
       {% for item in site.data.faqs limit: page.faq_limit %}
       <details>

@@ -16,30 +16,35 @@
   a: >-
     Hiyd runs on iPhone and iPad and requires iOS 18.6 or iPadOS 18.6 or later.
     The interface adapts to a sidebar layout on iPad and supports all
-    orientations.
+    orientations. On iPad, and on the iPhone Duo when it's unfolded, the
+    preview sits beside the editor and updates as you type.
 
 - q: "Where are my posts stored?"
   a: >-
     Notes are stored as .md files in your own iCloud Drive, in Files under iCloud
     Drive › Hiyd. Because they live in iCloud Drive they sync automatically across
-    your iPhone and iPad and you can open them in any other app. Hiyd has no
-    server and no account.
+    your iPhone and iPad and you can open them in any other app. If iCloud Drive
+    is off, they're saved on your device instead (Files › On My iPhone › Hiyd).
+    Hiyd has no server and no account.
 
 - q: "Does Hiyd sync between my iPhone and iPad?"
   a: >-
     Yes. Files are kept in iCloud Drive, so anything you save on one device
     appears on your other devices signed in to the same Apple Account. If iCloud
-    Drive is turned off, Hiyd shows its status as Unavailable and you can still
-    export files manually.
+    Drive is turned off, Hiyd saves posts on your device, and moves them into
+    iCloud Drive when you turn it on. A post with the same name as one already
+    in iCloud is saved with a number added, so nothing is overwritten.
 
 - q: "How does publishing to GitHub work?"
   a: >-
     In Settings › GitHub Publishing you add a repository: GitHub username,
     repository name, a folder path (default is _posts), and a fine-grained
     personal access token scoped to that repository with Contents set to Read and
-    write. When you publish, Hiyd commits the Markdown file to that folder on the
-    repository's default branch using the GitHub Contents API. You can store up
-    to five repositories and give each one its own name, icon and colour.
+    write. You can also name a branch; leave it blank for the default branch.
+    When you publish, Hiyd commits the Markdown file to that folder and branch
+    using the GitHub Contents API, creating the branch from the default branch
+    if it doesn't exist yet. You can store up to five repositories and give each
+    one its own name, icon and colour.
 
 - q: "Is my GitHub token safe?"
   a: >-
@@ -54,22 +59,32 @@
     Yes. title and date are always included and cannot be removed. In Settings ›
     Front Matter you can add your own default fields as Text, List or Boolean
     values, reorder them by dragging, and delete them by swiping. Every new note
-    starts with those fields filled in.
+    starts with those fields filled in, and you can change them for any one post
+    under Front Matter in the editor. Editing a saved post keeps its own front
+    matter.
 
 - q: "Does Hiyd work with Shortcuts and Siri?"
   a: >-
     Yes. Hiyd ships App Intents for creating a note, creating and saving a file,
-    listing files, reading a file's content, searching notes and opening a
-    specific page or file. You can trigger them from the Shortcuts app, Siri, or
+    listing files, reading a file's content, searching notes, publishing a post
+    and opening a specific page or file. Publish Post checks the post before it
+    sends anything, and won't overwrite a file on GitHub unless you turn
+    Overwrite on. You can trigger them from the Shortcuts app, Siri, or
     automations.
 
 - q: "Are there URL scheme deep links?"
   a: >-
     Yes. hiyd://create, hiyd://archive and hiyd://settings open those pages;
-    hiyd://create?title=...&body=... pre-fills the editor; and
+    hiyd://create?title=...&body=...&source=... pre-fills the editor; and
     hiyd://file?filename=example.md&restore=true opens a saved file for editing.
     Deep links work from Notes, Messages, widgets and the Shortcuts "Open URLs"
     action.
+
+- q: "Can I share text or a link into Hiyd?"
+  a: >-
+    Yes. Choose Hiyd in the share sheet in Safari or any other app. Hiyd starts
+    a new post with the selected text as a quote, the page title as the title,
+    and the link in the front matter as source.
 
 - q: "Does Hiyd collect any data or analytics?"
   a: >-

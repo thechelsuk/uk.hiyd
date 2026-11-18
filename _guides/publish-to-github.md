@@ -37,11 +37,12 @@ the blast radius is a single repo.</div>
 | **GitHub Username** | The owner of the repository. |
 | **Repository** | The repo name on its own, e.g. `blog`. |
 | **Folder Path** | Where posts are committed. Default is `_posts`. Leave blank for the repository root. |
+| **Branch** | Optional. Leave blank to publish to the repository's default branch. If the branch you name doesn't exist yet, Hiyd creates it from the default branch the first time you publish. |
 | **Personal Access Token** | Paste the token from step 1. |
 | **Commit message template** | Default `Add {filename} via Hiyd`. Placeholders: `{filename}`, `{title}`, `{datetime}`. |
 
-Hiyd validates the token against the repository before saving. Files are always
-committed to the repository's **default branch**.
+Hiyd validates the token against the repository before saving. Files are
+committed to the **Branch** you set, or to the repository's default branch.
 
 The token is stored in the iOS Keychain. It cannot be shown again or edited after
 saving — to change it, remove the repository and add it back. You can store up to
@@ -67,5 +68,5 @@ where.
   (no owner prefix), and that the token's **Contents** permission is
   **Read and write** for that repo.
 - **Rate limited:** GitHub's API has hourly limits; wait and retry.
-- **Wrong branch:** Hiyd publishes to the default branch. Change the repository's
-  default branch on GitHub if you need posts to land elsewhere.
+- **Wrong branch:** check the repository's **Branch** in Hiyd. To change it,
+  replace the repository's settings (you'll need to paste the token again).

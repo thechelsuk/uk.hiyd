@@ -1,5 +1,5 @@
 ---
-title: "Privacy Policy"
+title: "Privacy policy"
 eyebrow: "Legal"
 summary: "What Hiyd does and does not collect, and where your content lives."
 last_updated: "10 September 2026"
@@ -22,8 +22,11 @@ website.
 ## What the iOS app stores, and where
 
 - **Your posts** are saved as `.md` files in your iCloud Drive, in the folder
-  *iCloud Drive › Hiyd*. Apple syncs that folder between your devices. We cannot
-  see its contents.
+  *iCloud Drive › Hiyd*. Apple syncs that folder between your devices. If iCloud
+  Drive is off, they're saved on your device instead (*On My iPhone › Hiyd*) until
+  you turn it on. We cannot see either.
+- **Your unsaved draft**, and anything you share to Hiyd from another app, is kept
+  on the device until you save or clear it.
 - **Settings** (appearance, default front matter fields, the biometric-lock
   preference) are stored locally on the device via the system preferences store.
 - **GitHub personal access tokens**, if you add a repository for publishing, are

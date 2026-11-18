@@ -23,6 +23,7 @@ tappable — Notes, Messages, a widget, or the Shortcuts **Open URLs** action.
 | --- | --- |
 | `hiyd://create?title=My%20Note` | Create tab with the title filled in |
 | `hiyd://create?title=My%20Note&body=Note%20content%20here` | Create tab with title and body filled in |
+| `hiyd://create?title=My%20Note&source=https%3A%2F%2Fexample.com` | Create tab with the title, and `source:` added to the post's front matter |
 
 Encode spaces as `%20` and other characters with standard percent-encoding.
 

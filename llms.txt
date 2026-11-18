@@ -9,20 +9,31 @@ support development. Requires iOS / iPadOS 18.6 or later.
 
 Key facts:
 - Posts are stored as .md files in the user's own iCloud Drive (Files › iCloud Drive › Hiyd) and
-  sync across the user's devices. There is no Hiyd account and no Hiyd server.
+  sync across the user's devices. With iCloud Drive off, posts are saved on the device (Files ›
+  On My iPhone › Hiyd) and move into iCloud Drive when it is turned on. There is no Hiyd account
+  and no Hiyd server.
+- Unsaved drafts are kept if the app is closed. The editor has a Markdown formatting bar and
+  Command-key shortcuts (bold, italic, link, code) with an iPad keyboard. On iPad and the
+  unfolded iPhone Duo, a live preview sits beside the editor.
 - `title` and `date` front matter are always included. Users can add custom default fields as
-  Text, List or Boolean values, reorder them, and delete them.
+  Text, List or Boolean values, reorder them, and delete them. Each post can change its own
+  front matter, and editing a saved post keeps its own front matter.
 - GitHub publishing: add up to five repositories, each with a fine-grained personal access token
   (Contents: Read and write) stored in the iOS Keychain. Files are committed to a folder
-  (default `_posts`) on the repository's default branch via the GitHub Contents API. Commit
+  (default `_posts`) on the repository's default branch, or on an optional named branch that
+  Hiyd creates from the default branch if needed, via the GitHub Contents API. Commit
   message templates support {filename}, {title}, {datetime}. 5 MB file limit.
 - No analytics or tracking in the app. The only outbound network request is to api.github.com,
   and only when the user chooses to publish.
 - Face ID / Touch ID / passcode app lock is optional.
 - Shortcuts / Siri via App Intents: Create Note, Create File, List Files, Get File,
-  Get File Content, Search Notes, Open Page, Open File.
+  Get File Content, Search Notes, Publish Post, Open Page, Open File. Publish Post checks the
+  post (front matter with title and date, a valid date, a dated filename in _posts, 5 MB) and
+  only overwrites a file on GitHub when Overwrite is on.
+- Share sheet: share text or a link from any app to Hiyd. It starts a new post with the text as
+  a Markdown quote, the page title as the title, and the link as `source` in the front matter.
 - Deep links: hiyd://create, hiyd://archive, hiyd://settings,
-  hiyd://create?title=...&body=..., hiyd://file?filename=example.md&restore=true
+  hiyd://create?title=...&body=...&source=..., hiyd://file?filename=example.md&restore=true
 - Appearance: light/dark mode, custom tint colour, multiple app icons.
 - File formats: reads and writes .md and .txt. Output is standard Jekyll-compatible Markdown.
 - Chrome extension (separate tool, Manifest V3): select text on a page, right-click > "Hiyd
@@ -43,6 +54,7 @@ Key facts:
 - [Publish posts to GitHub](https://hiyd.uk/guides/publish-to-github/)
 - [Shortcuts, Siri & App Intents](https://hiyd.uk/guides/shortcuts-and-siri/)
 - [Deep links (the hiyd:// URL scheme)](https://hiyd.uk/guides/deep-links/)
+- [Share to Hiyd from any app](https://hiyd.uk/guides/share-to-hiyd/)
 - [Link posts with the Chrome extension](https://hiyd.uk/guides/link-posts/)
 
 ## Documentation & Policies

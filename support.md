@@ -18,7 +18,7 @@ description: "Get help with Hiyd: quick start, links to the guides and FAQ, trou
 
 **iOS app** — Install from the [App Store]({{ site.app_store_url }}) (iOS
 {{ site.min_ios_version }}+), open the **Create** tab, write a title and body,
-then use **••• › Save** to keep the file in iCloud Drive or **••• › Publish** to
+then use **••• › Save** to keep the file in iCloud Drive (or on your device) or **••• › Publish** to
 commit it to GitHub.
 
 **Chrome extension** — Install from the
@@ -27,16 +27,19 @@ and use the extension to capture it as a Markdown link post.
 
 ## Troubleshooting
 
-### iCloud shows "Unavailable"
+### Settings says "Saving on this device"
 
-Hiyd stores notes in iCloud Drive. If Settings shows iCloud as Unavailable:
+Hiyd stores notes in iCloud Drive. If Settings says it's **Saving on this device**,
+iCloud Drive isn't available and posts are kept on your device until it is. To
+turn iCloud on for Hiyd:
 
 1. Check **Settings › [your name] › iCloud › iCloud Drive** is on.
 2. Confirm the device has a network connection and enough storage.
 3. Make sure Hiyd is allowed to use iCloud Drive.
 
-You can still use **Export** to move drafts out manually while iCloud is
-unavailable.
+When iCloud Drive comes back, Hiyd moves the posts saved on your device into it.
+A post with the same name as one already in iCloud gets a number added, so
+nothing is overwritten.
 
 ### A post didn't publish to GitHub
 

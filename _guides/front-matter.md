@@ -14,8 +14,8 @@ block for you so you are not retyping `author:` and `tags:` on every post.
 `title` and `date` are always included and cannot be removed or renamed:
 
 - `title` comes from the **Item Title** field in the editor.
-- `date` is set when you create the file, in the format
-  `2026-09-10 09:24:00 +0100`.
+- `date` is the day you create the file, in the format `2026-09-10`. Editing a
+  post later keeps its original date.
 
 ## Adding your own fields
 
@@ -45,14 +45,22 @@ a new note previews as:
 ```yaml
 ---
 title: Hello, world
-date: 2026-09-10 09:24:00 +0100
+date: 2026-09-10
 author: Sam
 tags: [jekyll, ios]
 draft: false
 ---
 ```
 
-Edit any value per-post before you save — the defaults are just a starting point.
+## Front matter for each post
+
+The defaults are a starting point. In the editor, open **Front Matter** under the
+body to see this post's fields as YAML, and change, add or remove any of them for
+this post only. Your defaults in Settings stay as they are.
+
+When you open a saved post to edit it, Hiyd keeps that post's own front matter,
+whatever your defaults are now. Changing a default never rewrites posts you have
+already written.
 
 <div class="callout"><strong>Note:</strong> field keys must be unique, and you
 cannot reuse the reserved names <code>title</code> or <code>date</code>.</div>

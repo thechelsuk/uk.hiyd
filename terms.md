@@ -1,5 +1,5 @@
 ---
-title: "Terms of Service"
+title: "Terms of service"
 eyebrow: "Legal"
 summary: "The terms you agree to by using the Hiyd app or extension."
 last_updated: "10 September 2026"
@@ -31,7 +31,8 @@ not use it to:
 If you configure GitHub publishing, you are responsible for the personal access
 token you provide and for what is committed to your repositories using it. Use a
 fine-grained token scoped to only the repositories you intend to publish to.
-Hiyd commits to the repository's default branch at the folder path you set.
+Hiyd commits to the folder path and branch you set (the repository's default
+branch if you don't set one), and creates that branch if it doesn't exist.
 
 ## Purchases
 
