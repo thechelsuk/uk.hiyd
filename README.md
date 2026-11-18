@@ -75,7 +75,7 @@ Read our full [Privacy Policy](https://hiyd.uk/privacy) and [Security Policy](ht
 
 Need help? We're here for you:
 
-- Email: [feedback@thechels.uk](mailto:feedback@thechels.uk)
+- Email: [feedback@hiyd.uk](mailto:feedback@hiyd.uk)
 - Website: [hiyd.uk](https://hiyd.uk)
 
 ## Legal
