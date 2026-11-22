@@ -34,7 +34,7 @@ plugins:
 # Note: no jekyll-sitemap — /sitemap.xml is a Liquid template in the repo root.
 
 # --- Social / app ----------------------------------------------------------
-app_store_url: "https://apps.apple.com/gb/app/hiyd/id6746853559"
+app_store_url: "https://apps.apple.com/gb/app/hiyd/id6746853559?pt=127889770&ct=marketing&mt=8"
 app_store_id: "6746853559"
 chrome_store_url: "https://chromewebstore.google.com/detail/hiyd/hkeklhoojnogpfmiikadpcmkmpldhpce"
 min_ios_version: "18.6"

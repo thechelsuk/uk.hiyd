@@ -44,7 +44,7 @@ Key facts:
 
 ## Apps & Extensions
 
-- [Hiyd on the App Store](https://apps.apple.com/gb/app/hiyd/id6746853559): iOS and iPadOS app.
+- [Hiyd on the App Store](https://apps.apple.com/gb/app/hiyd/id6746853559?pt=127889770&ct=marketing&mt=8): iOS and iPadOS app.
 - [Hiyd on the Chrome Web Store](https://chromewebstore.google.com/detail/hiyd/hkeklhoojnogpfmiikadpcmkmpldhpce): Chromium browser extension for link posts.
 
 ## Guides
