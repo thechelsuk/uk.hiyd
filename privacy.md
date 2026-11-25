@@ -2,7 +2,7 @@
 title: "Privacy policy"
 eyebrow: "Legal"
 summary: "What Hiyd does and does not collect, and where your content lives."
-last_updated: "10 September 2026"
+last_updated: "25 November 2026"
 description: "Hiyd's privacy policy: no accounts, no analytics in the app, content stored in your own iCloud Drive, and GitHub contacted only when you choose to publish."
 ---
 
@@ -49,8 +49,9 @@ Hiyd does not send your content anywhere else, and does not contact us at all.
 ## The Chrome extension
 
 The extension captures the page you are on so you can turn it into a Markdown link
-post. It stores its working data in your browser's local storage. It does not
-send your data to us or to third parties.
+post. The only thing it saves is your custom front matter, in Chrome's sync
+storage, which Chrome keeps in step across the browsers you're signed in to. It
+does not send your data to us or to third parties.
 
 ## This website
 
